@@ -18,6 +18,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.daimajia.easing.linear.Linear;
+import com.nineoldandroids.animation.Animator;
 
 public class Activity_Content extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,12 +34,21 @@ public class Activity_Content extends AppCompatActivity
     private int mShortAnimationDuration = 1000;
     private String Startwert;
 
+    LinearLayout Layout_JustText;
+    LinearLayout Layout_Ubersicht;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_content_standard);
+
+        Layout_JustText = (LinearLayout)findViewById(R.id.Layout_JustText);
+        Layout_Ubersicht = (LinearLayout)findViewById(R.id.Layout_Ubersicht);
+
+        Layout_JustText.setVisibility(View.VISIBLE);
+        Layout_Ubersicht.setVisibility(View.GONE);
 
         init_toolbar_drawer();
 
@@ -87,8 +102,32 @@ public class Activity_Content extends AppCompatActivity
 
         } else if (id == R.id.nav_menu_übersicht) {
 
+            Layout_Ubersicht.setVisibility(View.VISIBLE);
 
-            
+            YoYo.with(Techniques.FadeInDown).duration(1000).playOn(Layout_Ubersicht);
+            YoYo.with(Techniques.FadeOutDown).duration(1000).withListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    Layout_JustText.setVisibility(View.GONE);
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animation) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animation) {
+
+                }
+            }).playOn(Layout_JustText);
+
+
 
         }
 

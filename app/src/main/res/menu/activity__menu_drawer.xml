@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Marktwirtschaft">
+        <menu>
+            <item
+                android:id="@+id/nav_share1"
+                android:icon="@drawable/ic_menu_share"
+                android:title="System" />
+            <item
+                android:id="@+id/nav_send2"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Persönlichkeiten" />
+
+            <item
+                android:id="@+id/nav_asdf3"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Wirtschaftliche Folgen" />
+
+            <item
+                android:id="@+id/nav_sendasdf4"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Internationales" />
+        </menu>
+    </item>
+
+    <item android:title="Planwirtschaft">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="System" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Persönlichkeiten" />
+
+            <item
+                android:id="@+id/nav_asdf"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Wirtschaftliche Folgen" />
+
+            <item
+                android:id="@+id/nav_sendasdf"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Internationales" />
+        </menu>
+    </item>
+
+    <item android:title="Mauerbau">
+        <menu>
+            <item
+                android:id="@+id/nav_share2"
+                android:icon="@drawable/ic_menu_share"
+                android:title="System" />
+            <item
+                android:id="@+id/nav_send3"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Persönlichkeiten" />
+
+            <item
+                android:id="@+id/nav_asdf4"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Wirtschaftliche Folgen" />
+
+            <item
+                android:id="@+id/nav_sendasdf5"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Internationales" />
+        </menu>
+    </item>
+
+</menu>

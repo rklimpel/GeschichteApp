@@ -6,6 +6,10 @@
         android:icon="@drawable/ic_menu_manage"
         android:id="@+id/nav_menu_übersicht"></item>
 
+    <group
+        android:checkableBehavior="single"
+        >
+
     <item android:title="Marktwirtschaft">
         <menu>
             <item
@@ -74,5 +78,8 @@
                 android:title="Internationales" />
         </menu>
     </item>
+
+
+    </group>
 
 </menu>

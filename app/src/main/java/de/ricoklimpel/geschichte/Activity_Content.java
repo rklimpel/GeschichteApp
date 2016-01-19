@@ -1,7 +1,7 @@
 package de.ricoklimpel.geschichte;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -10,37 +10,32 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.transition.TransitionValues;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.TranslateAnimation;
 
 public class Activity_Content extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private View mAboutView;
+    private View mÜbersichtView;
+    private int mShortAnimationDuration = 1000;
+    private String Startwert;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_content);
-
-
-        Activity_Content.this.setTitle("Über die App");
+        setContentView(R.layout.activity_content_standard);
 
         init_toolbar_drawer();
-
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
 
     }
 
@@ -79,33 +74,35 @@ public class Activity_Content extends AppCompatActivity
     }
 
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-
         if (id == R.id.nav_share) {
 
-            Activity_Content.this.setContentView(R.layout.activity_content_2);
-            Activity_Content.this.setTitle("Übersicht");
 
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-            fab.setVisibility(View.GONE);
+        } else if (id == R.id.nav_menu_übersicht) {
 
-            init_toolbar_drawer();
 
-        } else if (id == R.id.nav_send) {
+            
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
 
+
+
     private void init_toolbar_drawer() {
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -114,5 +111,10 @@ public class Activity_Content extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
     }
+
 }

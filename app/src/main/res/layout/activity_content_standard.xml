@@ -44,16 +44,14 @@
         </android.support.design.widget.AppBarLayout>
 
 
-        <include layout="@layout/content_activity_content"
-            android:id="@+id/includer" />
-
+        <include layout="@layout/content_standard"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@android:drawable/ic_dialog_email"
+            android:src="@drawable/ic_filter_list_white_24dp"
             app:layout_anchor="@id/app_bar"
             app:layout_anchorGravity="bottom|end" />
 
@@ -68,7 +66,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/activity_menu_drawer" />
+        app:menu="@menu/nav_drawer_menu" />
 
 </android.support.v4.widget.DrawerLayout>
 

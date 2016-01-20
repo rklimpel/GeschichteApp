@@ -1,5 +1,7 @@
 package de.ricoklimpel.geschichte;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -25,6 +27,8 @@ public class Activity_Content extends AppCompatActivity
     private View mÜbersichtView;
     private int mShortAnimationDuration = 1000;
     private String Startwert;
+
+    Toolbar toolbar;
 
     LinearLayout Layout_About;
     LinearLayout Layout_Ubersicht;
@@ -98,32 +102,61 @@ public class Activity_Content extends AppCompatActivity
 
         } else if (id == R.id.nav_menu_übersicht) {
 
-            if(layout_now != Layout_Ubersicht){
-
-                Layout_Transition(layout_now,Layout_Ubersicht,Techniques.FadeInDown,Techniques.FadeOutDown,800);
-                layout_now = Layout_Ubersicht;
-                setTitle("Übersicht");
-
-                FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
-                fab.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Layout_Transition(layout_now,Layout_About,Techniques.FadeInDown,Techniques.FadeOutDown,800);
-                        layout_now = Layout_About;
-                        setTitle("Über die App");
-
-                    }
-                });
-
-            }
-
+            set_layout_übersicht();
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+    }
+
+    private void set_layout_übersicht() {
+
+        if(layout_now != Layout_Ubersicht){
+
+            Layout_Transition(layout_now,Layout_Ubersicht, Techniques.FadeInDown,Techniques.FadeOutDown,800);
+            layout_now = Layout_Ubersicht;
+            toolbar.setTitle("Übersicht");
+
+
+
+            FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+            fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.ic_filter_list_white_24dp));
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_about();
+
+                }
+            });
+
+        }
+    }
+
+    private void set_layout_about() {
+
+        if(layout_now != Layout_About){
+
+
+            Layout_Transition(layout_now,Layout_About, Techniques.FadeInDown,Techniques.FadeOutDown,800);
+            layout_now = Layout_About;
+            toolbar.setTitle("Über die App");
+
+
+            FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+
+                }
+            });
+
+        }
 
     }
 
@@ -162,7 +195,7 @@ public class Activity_Content extends AppCompatActivity
     private void init_toolbar_drawer() {
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

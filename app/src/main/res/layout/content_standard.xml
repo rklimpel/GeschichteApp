@@ -17,6 +17,8 @@
 
         <include layout="@layout/layout_ubersicht"></include>
 
+        <include layout="@layout/layout_planwirtschaft_allgemein"></include>
+
     </RelativeLayout>
 
 

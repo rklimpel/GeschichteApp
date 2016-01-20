@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.daimajia.androidanimations.library.Techniques;
@@ -21,7 +22,7 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.nineoldandroids.animation.Animator;
 
 public class Activity_Content extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
 
     private View mAboutView;
@@ -40,6 +41,8 @@ public class Activity_Content extends AppCompatActivity
     LinearLayout Layout_About;
     LinearLayout Layout_Ubersicht;
     LinearLayout layout_now;
+    LinearLayout Layout_planwirtschaft_allgmein;
+
     CollapsingToolbarLayout CTL;
 
     FloatingActionButton fab;
@@ -60,8 +63,10 @@ public class Activity_Content extends AppCompatActivity
 
         Layout_About = (LinearLayout)findViewById(R.id.Layout_About);
         Layout_Ubersicht = (LinearLayout)findViewById(R.id.Layout_Ubersicht);
+        Layout_planwirtschaft_allgmein = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_allgemein);
 
         Layout_About.setVisibility(View.VISIBLE);
+        Layout_planwirtschaft_allgmein.setVisibility(View.GONE);
         Layout_Ubersicht.setVisibility(View.GONE);
 
         layout_now = Layout_About;
@@ -128,11 +133,10 @@ public class Activity_Content extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_share) {
-
+        if (id == R.id.nav_menu_planwirtschaft_allgmein) {
+            set_layout_planwirtschaft_allgemein();
 
         } else if (id == R.id.nav_menu_übersicht) {
-
             set_layout_übersicht();
 
         }
@@ -192,9 +196,36 @@ public class Activity_Content extends AppCompatActivity
 
     }
 
+    private void set_layout_planwirtschaft_allgemein(){
+
+        if(layout_now != Layout_planwirtschaft_allgmein){
+
+
+            Layout_Transition(layout_now,Layout_planwirtschaft_allgmein, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_allgmein;
+            CTL.setTitle("Allgmein");
+            CTL.setCollapsedTitleTextAppearance(R.style.TextAppereance);
+
+
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+
     private void FAB_press_animation(){
 
-        YoYo.with(Techniques.Bounce).duration(1200).playOn(fab);
+        YoYo.with(Techniques.Bounce).duration(500).playOn(fab);
 
     }
 
@@ -243,6 +274,20 @@ public class Activity_Content extends AppCompatActivity
 
 
         navigationView.setNavigationItemSelectedListener(this);
+
+    }
+
+    private void übersicht_menu_click(){
+
+        Button Übersicht_Planwirtschaft_Allgmein = (Button)findViewById(R.id.übersicht_planwirtschaft_allgmein);
+
+
+        Übersicht_Planwirtschaft_Allgmein.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_planwirtschaft_allgemein();
+            }
+        });
 
     }
 

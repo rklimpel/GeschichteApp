@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/Layout_About"
-    android:visibility="gone">
+    android:visibility="visible">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:id="@+id/tV_content"
-        android:text="@string/large_text" />
+        android:text="@string/long_text_about" />
 
 </LinearLayout>

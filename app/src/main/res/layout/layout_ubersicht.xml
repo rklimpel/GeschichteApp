@@ -9,6 +9,9 @@
     android:orientation="vertical"
     >
 
+    <!--Mauerbau Menu-->
+
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -19,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Planwirtschaft"
+            android:text="Mauerbau"
             android:textSize="30sp"
             android:textAlignment="center"
             android:gravity="center" />
@@ -39,21 +42,7 @@
         android:layout_height="80dp"
         android:elevation="10dp"
         android:background="@color/icons"
-        android:text="Über das System"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Geschichte des Systemss"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Planwirtschaft in der DDR"/>
+        android:text="Vorgeschichte"/>
 
     <Button
         android:layout_width="match_parent"
@@ -67,22 +56,31 @@
         android:layout_height="80dp"
         android:elevation="10dp"
         android:background="@color/icons"
-        android:text="Vorteile und Nachteile"/>
+        android:text="Der Mauerbau"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:elevation="10dp"
         android:background="@color/icons"
-        android:text="Planwirtschaft heute"/>
+        android:text="Konsequenzen"/>
 
-
-    <ImageView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:src="@android:drawable/divider_horizontal_dim_dark"
-        android:layout_marginTop="5dp"/>
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Auswirkungen bis Heute"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Anlässe zum Mauerbau"/>
+
+
+    <!--Marktwirtschaft Menu-->
 
 
     <android.support.v7.widget.CardView
@@ -161,6 +159,8 @@
         android:layout_marginTop="5dp"/>
 
 
+    <!--Plannwirtschaft Menu-->
+
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -172,7 +172,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Mauerbau"
+            android:text="Planwirtschaft"
             android:textSize="30sp"
             android:textAlignment="center"
             android:gravity="center" />
@@ -187,46 +187,54 @@
         android:src="@android:drawable/divider_horizontal_dim_dark"
         android:layout_marginBottom="5dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Vorgeschichte"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:id="@+id/übersicht_planwirtschaft_allgmein"
+            android:text="Allgemein"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Personen"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:text="Geschichte des Systemss"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Der Mauerbau"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:text="Planwirtschaft in der DDR"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Konsequenzen"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:text="Personen"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Auswirkungen bis Heute"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:text="Vorteile und Nachteile"/>
 
-    <Button
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:text="Planwirtschaft heute"/>
+
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Anlässe zum Mauerbau"/>
+        android:layout_height="1dp"
+        android:src="@android:drawable/divider_horizontal_dim_dark"
+        android:layout_marginTop="5dp"/>
 
 </LinearLayout>

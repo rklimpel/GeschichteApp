@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/mauersprung"
+        android:src="@drawable/mauersprung_blurred"
         android:id="@+id/imageView"
         android:scaleType="centerCrop" />
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/nav_header_height"
         android:orientation="vertical"
-        android:layout_margin="16dp">
+        android:layout_margin="8dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -27,13 +27,13 @@
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:text="Geschichtsprojekt"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:textSize="25sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mauerbau - Plan &amp; Marktwischtaft"
+            android:text="Mauerbau \nPlan &amp; Marktwischtaft"
             android:id="@+id/textView"
             android:textSize="20sp" />
 

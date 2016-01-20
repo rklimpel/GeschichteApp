@@ -3,6 +3,7 @@ package de.ricoklimpel.geschichte;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,15 +26,23 @@ public class Activity_Content extends AppCompatActivity
 
     private View mAboutView;
     private View mÜbersichtView;
-    private int mShortAnimationDuration = 1000;
+    private int mShortAnimationDuration = 600;
     private String Startwert;
 
+    Techniques AnimIn = Techniques.FadeInDown;
+    Techniques AnimOut = Techniques.FadeOut;
+    Integer AnimDuration = 600;
+
     Toolbar toolbar;
+    DrawerLayout drawer;
+    NavigationView navigationView;
 
     LinearLayout Layout_About;
     LinearLayout Layout_Ubersicht;
-
     LinearLayout layout_now;
+    CollapsingToolbarLayout CTL;
+
+    FloatingActionButton fab;
 
 
     @Override
@@ -41,6 +50,13 @@ public class Activity_Content extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_content_standard);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        fab = (FloatingActionButton)findViewById(R.id.fab);
+
+        CTL = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar_layout);
 
         Layout_About = (LinearLayout)findViewById(R.id.Layout_About);
         Layout_Ubersicht = (LinearLayout)findViewById(R.id.Layout_Ubersicht);
@@ -50,7 +66,22 @@ public class Activity_Content extends AppCompatActivity
 
         layout_now = Layout_About;
 
+        Activity_Content.this.fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+        Activity_Content.this.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                set_layout_übersicht();
+
+            }
+        });
+
+        set_layout_about();
         init_toolbar_drawer();
+
+        CTL.setTitle("Über die App");
+
+
 
     }
 
@@ -116,19 +147,18 @@ public class Activity_Content extends AppCompatActivity
 
         if(layout_now != Layout_Ubersicht){
 
-            Layout_Transition(layout_now,Layout_Ubersicht, Techniques.FadeInDown,Techniques.FadeOutDown,800);
+            Layout_Transition(layout_now,Layout_Ubersicht, AnimIn,AnimOut,AnimDuration);
             layout_now = Layout_Ubersicht;
-            toolbar.setTitle("Übersicht");
+            CTL.setTitle("Übersicht");
 
 
-
-            FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
-            fab.setBackgroundDrawable(getResources().getDrawable(R.drawable.ic_filter_list_white_24dp));
+            fab.setImageResource(R.drawable.ic_info_outline_white_24dp);
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     set_layout_about();
+                    FAB_press_animation();
 
                 }
             });
@@ -141,22 +171,30 @@ public class Activity_Content extends AppCompatActivity
         if(layout_now != Layout_About){
 
 
-            Layout_Transition(layout_now,Layout_About, Techniques.FadeInDown,Techniques.FadeOutDown,800);
+            Layout_Transition(layout_now,Layout_About, AnimIn,AnimOut,AnimDuration);
             layout_now = Layout_About;
-            toolbar.setTitle("Über die App");
+            CTL.setTitle("Über die App");
 
 
-            FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     set_layout_übersicht();
+                    FAB_press_animation();
 
                 }
             });
 
         }
+
+    }
+
+    private void FAB_press_animation(){
+
+        YoYo.with(Techniques.Bounce).duration(1200).playOn(fab);
 
     }
 
@@ -166,6 +204,7 @@ public class Activity_Content extends AppCompatActivity
         layout_to.setVisibility(View.VISIBLE);
 
         YoYo.with(Tech_in).duration(Duration).playOn(layout_to);
+
         YoYo.with(Tech_Out).duration(Duration).withListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -195,16 +234,14 @@ public class Activity_Content extends AppCompatActivity
     private void init_toolbar_drawer() {
 
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(this);
 
     }

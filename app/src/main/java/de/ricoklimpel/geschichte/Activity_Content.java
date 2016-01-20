@@ -1,28 +1,20 @@
 package de.ricoklimpel.geschichte;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.transition.Slide;
-import android.transition.Transition;
-import android.transition.TransitionValues;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.daimajia.easing.linear.Linear;
 import com.nineoldandroids.animation.Animator;
 
 public class Activity_Content extends AppCompatActivity
@@ -34,8 +26,10 @@ public class Activity_Content extends AppCompatActivity
     private int mShortAnimationDuration = 1000;
     private String Startwert;
 
-    LinearLayout Layout_JustText;
+    LinearLayout Layout_About;
     LinearLayout Layout_Ubersicht;
+
+    LinearLayout layout_now;
 
 
     @Override
@@ -44,11 +38,13 @@ public class Activity_Content extends AppCompatActivity
 
         setContentView(R.layout.activity_content_standard);
 
-        Layout_JustText = (LinearLayout)findViewById(R.id.Layout_JustText);
+        Layout_About = (LinearLayout)findViewById(R.id.Layout_About);
         Layout_Ubersicht = (LinearLayout)findViewById(R.id.Layout_Ubersicht);
 
-        Layout_JustText.setVisibility(View.VISIBLE);
+        Layout_About.setVisibility(View.VISIBLE);
         Layout_Ubersicht.setVisibility(View.GONE);
+
+        layout_now = Layout_About;
 
         init_toolbar_drawer();
 
@@ -102,31 +98,25 @@ public class Activity_Content extends AppCompatActivity
 
         } else if (id == R.id.nav_menu_übersicht) {
 
-            Layout_Ubersicht.setVisibility(View.VISIBLE);
+            if(layout_now != Layout_Ubersicht){
 
-            YoYo.with(Techniques.FadeInDown).duration(1000).playOn(Layout_Ubersicht);
-            YoYo.with(Techniques.FadeOutDown).duration(1000).withListener(new Animator.AnimatorListener() {
-                @Override
-                public void onAnimationStart(Animator animation) {
+                Layout_Transition(layout_now,Layout_Ubersicht,Techniques.FadeInDown,Techniques.FadeOutDown,800);
+                layout_now = Layout_Ubersicht;
+                setTitle("Übersicht");
 
-                }
+                FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+                fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    Layout_JustText.setVisibility(View.GONE);
-                }
+                        Layout_Transition(layout_now,Layout_About,Techniques.FadeInDown,Techniques.FadeOutDown,800);
+                        layout_now = Layout_About;
+                        setTitle("Über die App");
 
-                @Override
-                public void onAnimationCancel(Animator animation) {
+                    }
+                });
 
-                }
-
-                @Override
-                public void onAnimationRepeat(Animator animation) {
-
-                }
-            }).playOn(Layout_JustText);
-
+            }
 
 
         }
@@ -134,6 +124,36 @@ public class Activity_Content extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+    }
+
+    private void Layout_Transition(final LinearLayout layout_from , LinearLayout layout_to,
+                                   Techniques Tech_in, Techniques Tech_Out , Integer Duration){
+
+        layout_to.setVisibility(View.VISIBLE);
+
+        YoYo.with(Tech_in).duration(Duration).playOn(layout_to);
+        YoYo.with(Tech_Out).duration(Duration).withListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                layout_from.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        }).playOn(layout_from);
 
     }
 

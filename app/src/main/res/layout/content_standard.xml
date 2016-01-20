@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,72 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Layout_JustText"
-            android:visibility="gone">
+        <include layout="@layout/layout_about"></include>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:id="@+id/tV_content"
-                android:text="@string/large_text" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/Layout_Ubersicht"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
-                android:elevation="10dp"
-                android:text="Plan 1"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
-                android:elevation="10dp"
-                android:text="Plan 2"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
-                android:elevation="10dp"
-                android:text="Plan 3"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
-                android:elevation="10dp"
-                android:text="Plan 4"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
-                android:elevation="10dp"
-                android:text="Plan 5"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_margin="15dp"
-                android:elevation="10dp"
-                android:text="Plan 6"/>
-
-        </LinearLayout>
-
+        <include layout="@layout/layout_ubersicht"></include>
 
     </RelativeLayout>
 

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Ubersicht"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Planwirtschaft"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center" />
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@android:drawable/divider_horizontal_dim_dark"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Über das System"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Geschichte des Systemss"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Planwirtschaft in der DDR"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Personen"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Vorteile und Nachteile"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Planwirtschaft heute"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@android:drawable/divider_horizontal_dim_dark"
+        android:layout_marginTop="5dp"/>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Marktwirtschaft"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center" />
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@android:drawable/divider_horizontal_dim_dark"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Über das System"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Geschichte des Systemss"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Planwirtschaft in der DDR"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Personen"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Vorteile und Nachteile"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:background="@color/icons"
+        android:text="Planwirtschaft heute"/>
+
+</LinearLayout>

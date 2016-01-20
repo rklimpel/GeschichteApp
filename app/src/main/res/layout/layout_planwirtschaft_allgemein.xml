@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:id="@+id/Layout_Planwirtschaft_allgemein"
     android:visibility="visible"
     android:orientation="vertical">
@@ -38,7 +38,12 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:id="@+id/tV_content"
-                android:text="@string/text_planwirtschaft_allgmein" />
+                android:text="@string/text_planwirtschaft_allgmein"
+                android:textSize="16dp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality" />
 
             <ImageView
                 android:layout_width="match_parent"

@@ -3,11 +3,14 @@ package de.ricoklimpel.geschichte;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,12 +30,12 @@ public class Activity_Content extends AppCompatActivity
 
     private View mAboutView;
     private View mÜbersichtView;
-    private int mShortAnimationDuration = 600;
+    private int mShortAnimationDuration = 500;
     private String Startwert;
 
-    Techniques AnimIn = Techniques.FadeInDown;
-    Techniques AnimOut = Techniques.FadeOut;
-    Integer AnimDuration = 600;
+    final Techniques AnimIn = Techniques.FadeIn;
+    final Techniques AnimOut = Techniques.FadeOut;
+    final Integer AnimDuration = 300;
 
     Toolbar toolbar;
     DrawerLayout drawer;
@@ -42,6 +45,7 @@ public class Activity_Content extends AppCompatActivity
     LinearLayout Layout_Ubersicht;
     LinearLayout layout_now;
     LinearLayout Layout_planwirtschaft_allgmein;
+    NestedScrollView Nestedt_Scroll;
 
     CollapsingToolbarLayout CTL;
 
@@ -64,6 +68,7 @@ public class Activity_Content extends AppCompatActivity
         Layout_About = (LinearLayout)findViewById(R.id.Layout_About);
         Layout_Ubersicht = (LinearLayout)findViewById(R.id.Layout_Ubersicht);
         Layout_planwirtschaft_allgmein = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_allgemein);
+        Nestedt_Scroll = (NestedScrollView)findViewById(R.id.Nested_Scroll);
 
         Layout_About.setVisibility(View.VISIBLE);
         Layout_planwirtschaft_allgmein.setVisibility(View.GONE);
@@ -86,10 +91,7 @@ public class Activity_Content extends AppCompatActivity
 
         CTL.setTitle("Über die App");
 
-
-
     }
-
 
 
     @Override
@@ -125,8 +127,6 @@ public class Activity_Content extends AppCompatActivity
     }
 
 
-
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -155,6 +155,12 @@ public class Activity_Content extends AppCompatActivity
             layout_now = Layout_Ubersicht;
             CTL.setTitle("Übersicht");
 
+            Nestedt_Scroll.scrollTo(0,0);
+
+
+
+            //Init Buttons
+            übersicht_menu_click();
 
             fab.setImageResource(R.drawable.ic_info_outline_white_24dp);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -179,7 +185,7 @@ public class Activity_Content extends AppCompatActivity
             layout_now = Layout_About;
             CTL.setTitle("Über die App");
 
-
+            Nestedt_Scroll.scrollTo(0,0);
 
             fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -204,9 +210,8 @@ public class Activity_Content extends AppCompatActivity
             Layout_Transition(layout_now,Layout_planwirtschaft_allgmein, AnimIn,AnimOut,AnimDuration);
             layout_now = Layout_planwirtschaft_allgmein;
             CTL.setTitle("Allgmein");
-            CTL.setCollapsedTitleTextAppearance(R.style.TextAppereance);
 
-
+            Nestedt_Scroll.scrollTo(0,-10);
 
             fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -229,29 +234,46 @@ public class Activity_Content extends AppCompatActivity
 
     }
 
-    private void Layout_Transition(final LinearLayout layout_from , LinearLayout layout_to,
-                                   Techniques Tech_in, Techniques Tech_Out , Integer Duration){
-
-        layout_to.setVisibility(View.VISIBLE);
-
-        YoYo.with(Tech_in).duration(Duration).playOn(layout_to);
+    private void Layout_Transition(final LinearLayout layout_from , final LinearLayout layout_to,
+                                   final Techniques Tech_in, final Techniques Tech_Out , final Integer Duration){
 
         YoYo.with(Tech_Out).duration(Duration).withListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
 
             }
-
             @Override
             public void onAnimationEnd(Animator animation) {
-                layout_from.setVisibility(View.GONE);
-            }
 
+                layout_from.setVisibility(View.GONE);
+
+                YoYo.with(Tech_in).duration(Duration).withListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        layout_to.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                }).playOn(layout_to);
+
+            }
             @Override
             public void onAnimationCancel(Animator animation) {
 
             }
-
             @Override
             public void onAnimationRepeat(Animator animation) {
 
@@ -263,7 +285,6 @@ public class Activity_Content extends AppCompatActivity
 
 
     private void init_toolbar_drawer() {
-
 
         setSupportActionBar(toolbar);
 
@@ -280,7 +301,6 @@ public class Activity_Content extends AppCompatActivity
     private void übersicht_menu_click(){
 
         Button Übersicht_Planwirtschaft_Allgmein = (Button)findViewById(R.id.übersicht_planwirtschaft_allgmein);
-
 
         Übersicht_Planwirtschaft_Allgmein.setOnClickListener(new View.OnClickListener() {
             @Override

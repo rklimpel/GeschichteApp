@@ -36,12 +36,12 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationBar.tintColor = .whiteColor()
         navigationBar.barTintColor = mainColor
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationBar.layer.masksToBounds = false
         
-        let sb = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 20))
+        let sb = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 20))
         sb.backgroundColor = derivatedColor
         self.view.addSubview(sb)
         
-        self.view.backgroundColor = UIColor.lightGrayColor()
     }
     
     func showMenu() {

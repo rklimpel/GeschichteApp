@@ -7,28 +7,85 @@
 //
 
 import UIKit
+import JTMaterialTransition
+import SAConfettiView
+import FlowingMenu
 
-class MasterViewController: UITableViewController {
-
-    var detailViewController: DetailViewController? = nil
-    var objects = [AnyObject]()
-
-
+class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FlowingMenuDelegate {
+    
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
+    
+    let PresentSegueName = "PresentMenuSegue"
+    let mainColor = UIColor(red: 119.0/255.0, green: 84.0/255.0, blue: 72.0/255.0, alpha: 1.0)
+    let derivatedColor = UIColor(red: 92.0/255.0, green: 64.0/255.0, blue: 56.0/255.0, alpha: 1.0)
+    
+    var menu: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        
+        let button = UIButton(frame: CGRectMake(0, 0, navigationBar.frame.height * 1.5, navigationBar.frame.height))
+        button.setImage(UIImage(named: ""), forState: UIControlState.Normal)
+        button.setImage(UIImage(named: ""), forState: UIControlState.Highlighted)
+        navigationBar.addSubview(button)
+        
+        flowingMenuTransitionManager.setInteractivePresentationView(view)
+        flowingMenuTransitionManager.delegate = self
+        
+        navigationBar.tintColor = .whiteColor()
+        navigationBar.barTintColor = mainColor
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        let sb = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 20))
+        sb.backgroundColor = derivatedColor
+        self.view.addSubview(sb)
+        
+        self.view.backgroundColor = UIColor.lightGrayColor()
+    }
+    
+    func showMenu() {
+        performSegueWithIdentifier("PresentMenuSegue", sender: self)
+    }
+    
+    // MARK: - Interacting with Storyboards and Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == PresentSegueName {
+            let vc = segue.destinationViewController
+            vc.transitioningDelegate = flowingMenuTransitionManager
+            
+            flowingMenuTransitionManager.setInteractiveDismissView(vc.view)
+            
+            menu = vc
         }
     }
+    
+    @IBAction func unwindToMainViewController(sender: UIStoryboardSegue) {
+    }
+    
+    // MARK: - Managing the Status Bar
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    // MARK: - FlowingMenu Delegate Methods
+    
+    func colorOfElasticShapeInFlowingMenu(flowingMenu: FlowingMenuTransitionManager) -> UIColor? {
+        return mainColor
+    }
+    
+    func flowingMenuNeedsPresentMenu(flowingMenu: FlowingMenuTransitionManager) {
+        performSegueWithIdentifier(PresentSegueName, sender: self)
+    }
+    
+    func flowingMenuNeedsDismissMenu(flowingMenu: FlowingMenuTransitionManager) {
+        menu?.dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
     }
 
@@ -37,56 +94,25 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-
-    // MARK: - Segues
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
-    }
 
     // MARK: - Table View
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
     }
 
 

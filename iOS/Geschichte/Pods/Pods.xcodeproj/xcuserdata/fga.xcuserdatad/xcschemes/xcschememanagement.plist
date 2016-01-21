@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>FlowingMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JTMaterialTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Geschichte.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAConfettiView-SAConfettiView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAConfettiView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1DC73C882A3C57F93ED21B72BADF6F6C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6012E5BD00F813DFDA770631746D441A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AAF947A29E62466AD765D550748C251</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADE7C0ECADE245A2BC2D1749B835F21C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F619E87BFE638E6588E80CA42CAFB77E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

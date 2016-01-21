@@ -1,0 +1,6 @@
+framework module FlowingMenu {
+  umbrella header "FlowingMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

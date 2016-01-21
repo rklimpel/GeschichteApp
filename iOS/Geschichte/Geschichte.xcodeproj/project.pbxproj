@@ -14,6 +14,7 @@
 		C50670971C4FAD5400F10E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50670961C4FAD5400F10E41 /* Assets.xcassets */; };
 		C506709A1C4FAD5400F10E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50670981C4FAD5400F10E41 /* LaunchScreen.storyboard */; };
 		C513CAD41C5135EE00991F2B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD31C5135EE00991F2B /* MenuViewController.swift */; };
+		C513CAD61C516E2100991F2B /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD51C516E2100991F2B /* HamburgerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C50670991C4FAD5400F10E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C506709B1C4FAD5400F10E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C513CAD31C5135EE00991F2B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C513CAD51C516E2100991F2B /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		E8CE63316A082DA55B2CBF48 /* Pods_Geschichte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geschichte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		C506708C1C4FAD5400F10E41 /* Geschichte */ = {
 			isa = PBXGroup;
 			children = (
+				C513CAD51C516E2100991F2B /* HamburgerButton.swift */,
 				C506708D1C4FAD5400F10E41 /* AppDelegate.swift */,
 				C506708F1C4FAD5400F10E41 /* MasterViewController.swift */,
 				C513CAD31C5135EE00991F2B /* MenuViewController.swift */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50670901C4FAD5400F10E41 /* MasterViewController.swift in Sources */,
+				C513CAD61C516E2100991F2B /* HamburgerButton.swift in Sources */,
 				C506708E1C4FAD5400F10E41 /* AppDelegate.swift in Sources */,
 				C513CAD41C5135EE00991F2B /* MenuViewController.swift in Sources */,
 			);

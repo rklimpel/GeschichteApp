@@ -34,30 +34,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TSMarkdownParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0E5D33DE902826B985A2D852CB75F37E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30922FEDF3EA976F59598ECF2E739237</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>559D3570E66C5CE04C262467ED076E65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6012E5BD00F813DFDA770631746D441A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68492A2A269F9A756AC5C56E7E0559EC</key>
+		<key>B536D3DDE45AB8069B3B6A02B33AB148</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F6519C96359A4A1D13269E31744DA85</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC6884890733EE9BE02A6F01858662EB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C55EB732EC58F6D5758E361F0EFB6556</key>
+		<key>E1E5828EE6BE35FBFFE929465A524E0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

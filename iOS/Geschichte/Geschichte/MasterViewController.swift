@@ -10,6 +10,7 @@ import UIKit
 import JTMaterialTransition
 import SAConfettiView
 import FlowingMenu
+import TSMarkdownParser
 
 class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FlowingMenuDelegate, UIViewControllerTransitioningDelegate {
     

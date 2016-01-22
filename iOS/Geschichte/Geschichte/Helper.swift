@@ -10,6 +10,11 @@ import UIKit
 import SwiftyJSON
 
 class Helper: NSObject {
+    
+    static let sharedHelper = Helper()
+    
+    public var currentArticle:Article?
+    
     class func getJSON(completion: (JSON) -> ()) {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
@@ -26,4 +31,10 @@ class Helper: NSObject {
         }
         }
     }
+}
+
+struct Article {
+    let title:String!
+    let author:String?
+    let contents:NSAttributedString!
 }

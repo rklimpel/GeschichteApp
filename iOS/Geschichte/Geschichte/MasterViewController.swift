@@ -34,7 +34,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         flowingMenuTransitionManager.delegate = self
         
         navigationBar.tintColor = .whiteColor()
-        navigationBar.barTintColor = mainColor
+        navigationBar.barTintColor = derivatedColor
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationBar.layer.masksToBounds = false
         

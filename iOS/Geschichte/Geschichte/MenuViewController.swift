@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 final class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var topBar: UINavigationBar!
     @IBOutlet weak var backButtonItem: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    var json:JSON?
     
     let mainColor = UIColor(red: 119.0/255.0, green: 84.0/255.0, blue: 72.0/255.0, alpha: 1.0)
     let derivatedColor = UIColor(red: 92.0/255.0, green: 64.0/255.0, blue: 56.0/255.0, alpha: 1.0)
@@ -20,13 +22,19 @@ final class MenuViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         
         topBar.tintColor = UIColor.whiteColor()
-        topBar.barTintColor = mainColor
+        topBar.barTintColor = derivatedColor
         topBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         topBar.layer.masksToBounds = false
         
         let sb = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 20))
         sb.backgroundColor = derivatedColor
         self.view.addSubview(sb)
+        
+        Helper.getJSON { (result) -> () in
+            self.json = result
+            self.tableView.reloadData()
+        }
+
     }
     
     // MARK: - Managing the Status Bar
@@ -37,32 +45,26 @@ final class MenuViewController: UIViewController, UITableViewDataSource, UITable
     
     // MARK: - UITableView DataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return json?["sections"].count ?? 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0: return 5
-        case 1: return 6
-        case 2: return 4
-        default: return 0
-        }
+        return json?["sections"][section]["articles"].count ?? 0
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0: return "Mauerbau"
-        case 1: return "Planwirtschaft"
-        case 2: return "Marktwirtschaft"
-        default: return ""
-        }
+        return json?["sections"][section]["title"].string
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = "\(indexPath)"
+        cell.textLabel?.text = json?["sections"][indexPath.section]["articles"][indexPath.row]["title"].string
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

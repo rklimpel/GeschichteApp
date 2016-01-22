@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Geschichte/FlowingMenu.framework"
   install_framework "Pods-Geschichte/JTMaterialTransition.framework"
   install_framework "Pods-Geschichte/SAConfettiView.framework"
+  install_framework "Pods-Geschichte/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Geschichte/FlowingMenu.framework"
   install_framework "Pods-Geschichte/JTMaterialTransition.framework"
   install_framework "Pods-Geschichte/SAConfettiView.framework"
+  install_framework "Pods-Geschichte/SwiftyJSON.framework"
 fi

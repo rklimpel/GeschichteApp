@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Helper: NSObject {
-    class func getJSON() -> Dictionary<String,String> {
+    class func getJSON(completion: (JSON) -> ()) {
         
-        let url = "http://finngaida.de/schule/geschichte"
-        let response = NSString(contentsOfURL: NSURL(string: url)!, encoding: NSUTF8StringEncoding)
-        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            
+        do {
+            let url = "http://finngaida.de/school/geschichte/index.json"
+            let response = try NSData(contentsOfURL: NSURL(string: url)!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+            let json = JSON(data: response)
+            
+            completion(json)
+        } catch {
+            print("Error: \(error)")
+            completion(nil)
+        }
+        }
     }
 }

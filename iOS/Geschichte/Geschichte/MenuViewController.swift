@@ -25,11 +25,15 @@ final class MenuViewController: UIViewController, UITableViewDataSource, UITable
         topBar.tintColor = UIColor.whiteColor()
         topBar.barTintColor = derivatedColor
         topBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        topBar.layer.masksToBounds = false
         
         let sb = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 20))
         sb.backgroundColor = derivatedColor
         self.view.addSubview(sb)
+        
+        let headerImg = UIImageView(image: UIImage(named: "mauersprung"))
+        headerImg.frame = CGRectMake(0, -(self.view.frame.width * 0.5), self.view.frame.width, self.view.frame.width * 0.5)
+        tableView.contentOffset = CGPointMake(0, headerImg.frame.height)
+        tableView.addSubview(headerImg)
         
         Helper.getJSON { (result) -> () in
             self.json = result

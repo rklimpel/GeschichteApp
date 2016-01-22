@@ -45,11 +45,11 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sb.backgroundColor = derivatedColor
         self.view.addSubview(sb)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "viewDidLoad", name: ArticleSelectedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload", name: ArticleSelectedNotification, object: nil)
         
         // Article setup
         guard let article = Helper.sharedHelper.currentArticle else {print("damn");return}
-        print("Article: \(article.title)")
+        print("Article: \(article.contents)")
         
         navItem.title = article.title
         
@@ -57,18 +57,22 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let title = UILabel(frame: CGRectMake(margin, margin, scrollView.frame.width - margin * 2, 50))
         title.textAlignment = NSTextAlignment.Center
         title.textColor = UIColor.darkGrayColor()
-        title.font = UIFont(name: "HelvetivaNeue", size: 30)
+        title.font = UIFont(name: "AmericanTypewriter-Bold", size: 40)
         title.text = article.title
         scrollView.addSubview(title)
         
         let content = UILabel(frame: CGRectMake(margin, title.frame.origin.y + title.frame.height + margin, scrollView.frame.width - margin * 2, 300))
         content.textColor = UIColor.blackColor()
-        content.font = UIFont(name: "HelveticaNeue", size: 18)
+        content.font = UIFont(name: "AmericanTypewriter", size: 20)
         content.lineBreakMode = NSLineBreakMode.ByWordWrapping
         content.textAlignment = NSTextAlignment.Justified
         content.attributedText = article.contents
         scrollView.addSubview(content)
         
+    }
+    
+    func reload() {
+        presentViewController((self.storyboard?.instantiateInitialViewController())!, animated: false, completion: nil)
     }
     
     func showMenu() {

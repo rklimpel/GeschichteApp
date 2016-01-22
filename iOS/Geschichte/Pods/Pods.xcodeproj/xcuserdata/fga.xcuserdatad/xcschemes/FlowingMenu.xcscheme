@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '85767797F38494640ED98597'
+               BlueprintIdentifier = 'D43195DD29B1B6DEFDBD807D'
                BlueprintName = 'FlowingMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'FlowingMenu.framework'>

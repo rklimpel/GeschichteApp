@@ -13,7 +13,7 @@ class Helper: NSObject {
     
     static let sharedHelper = Helper()
     
-    public var currentArticle:Article?
+    var currentArticle:Article?
     
     class func getJSON(completion: (JSON) -> ()) {
         
@@ -34,7 +34,7 @@ class Helper: NSObject {
 }
 
 struct Article {
-    let title:String!
+    let title:String?
     let author:String?
-    let contents:NSAttributedString!
+    let contents:NSAttributedString?
 }

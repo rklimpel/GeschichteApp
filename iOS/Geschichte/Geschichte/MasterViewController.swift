@@ -16,12 +16,14 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
     
     var menu: UIViewController?
     var button: HamburgerButton!
     
     let PresentSegueName = "PresentMenuSegue"
+    let ArticleSelectedNotification = "ArticleSelectedNotification"
     let mainColor = UIColor(red: 119.0/255.0, green: 84.0/255.0, blue: 72.0/255.0, alpha: 1.0)
     let derivatedColor = UIColor(red: 92.0/255.0, green: 64.0/255.0, blue: 56.0/255.0, alpha: 1.0)
     
@@ -42,6 +44,30 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let sb = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 20))
         sb.backgroundColor = derivatedColor
         self.view.addSubview(sb)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "viewDidLoad", name: ArticleSelectedNotification, object: nil)
+        
+        // Article setup
+        guard let article = Helper.sharedHelper.currentArticle else {print("damn");return}
+        print("Article: \(article.title)")
+        
+        navItem.title = article.title
+        
+        let margin:CGFloat = 10
+        let title = UILabel(frame: CGRectMake(margin, margin, scrollView.frame.width - margin * 2, 50))
+        title.textAlignment = NSTextAlignment.Center
+        title.textColor = UIColor.darkGrayColor()
+        title.font = UIFont(name: "HelvetivaNeue", size: 30)
+        title.text = article.title
+        scrollView.addSubview(title)
+        
+        let content = UILabel(frame: CGRectMake(margin, title.frame.origin.y + title.frame.height + margin, scrollView.frame.width - margin * 2, 300))
+        content.textColor = UIColor.blackColor()
+        content.font = UIFont(name: "HelveticaNeue", size: 18)
+        content.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        content.textAlignment = NSTextAlignment.Justified
+        content.attributedText = article.contents
+        scrollView.addSubview(content)
         
     }
     

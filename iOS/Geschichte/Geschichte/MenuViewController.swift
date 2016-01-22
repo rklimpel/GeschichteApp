@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import TSMarkdownParser
 
 final class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var topBar: UINavigationBar!
@@ -66,5 +67,17 @@ final class MenuViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let title = json?["sections"][indexPath.section]["articles"][indexPath.row]["title"].stringValue
+        let author = json?["sections"][indexPath.section]["articles"][indexPath.row]["author"].stringValue
+        let content = json?["sections"][indexPath.section]["articles"][indexPath.row]["contents"].stringValue
+        let contents = TSMarkdownParser.standardParser().attributedStringFromMarkdown(content, attributes: nil)
+        let article = Article(title: title, author: author, contents:contents)
+        
+        Helper.sharedHelper.currentArticle = article
+        
+        dismissViewControllerAnimated(true) { () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName("ArticleSelectedNotification", object: nil)
+        }
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gqz-Xa-YKb">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -46,6 +45,7 @@
                         <outlet property="flowingMenuTransitionManager" destination="vQ3-62-FWO" id="0HM-Cs-mcH"/>
                         <outlet property="navItem" destination="Hrc-OA-WQC" id="k6e-UO-g0M"/>
                         <outlet property="navigationBar" destination="HJG-x5-whU" id="mqm-eQ-1gR"/>
+                        <outlet property="scrollView" destination="F94-i9-oax" id="n2O-PF-cXj"/>
                         <segue destination="0QU-UV-wb2" kind="presentation" identifier="PresentMenuSegue" id="A2b-bO-3vD"/>
                     </connections>
                 </viewController>

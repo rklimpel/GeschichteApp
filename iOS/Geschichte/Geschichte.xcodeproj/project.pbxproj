@@ -15,7 +15,6 @@
 		C506709A1C4FAD5400F10E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50670981C4FAD5400F10E41 /* LaunchScreen.storyboard */; };
 		C513CAD41C5135EE00991F2B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD31C5135EE00991F2B /* MenuViewController.swift */; };
 		C513CAD61C516E2100991F2B /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD51C516E2100991F2B /* HamburgerButton.swift */; };
-		C513CAD81C5266F200991F2B /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = C513CAD71C5266F200991F2B /* sample.json */; };
 		C513CADA1C52685C00991F2B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD91C52685C00991F2B /* Helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		C506709B1C4FAD5400F10E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C513CAD31C5135EE00991F2B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C513CAD51C516E2100991F2B /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
-		C513CAD71C5266F200991F2B /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		C513CAD91C52685C00991F2B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E8CE63316A082DA55B2CBF48 /* Pods_Geschichte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geschichte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,7 +89,6 @@
 				C506708F1C4FAD5400F10E41 /* MasterViewController.swift */,
 				C513CAD31C5135EE00991F2B /* MenuViewController.swift */,
 				C513CAD91C52685C00991F2B /* Helper.swift */,
-				C513CAD71C5266F200991F2B /* sample.json */,
 				C50670931C4FAD5400F10E41 /* Main.storyboard */,
 				C50670961C4FAD5400F10E41 /* Assets.xcassets */,
 				C50670981C4FAD5400F10E41 /* LaunchScreen.storyboard */,
@@ -162,7 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C506709A1C4FAD5400F10E41 /* LaunchScreen.storyboard in Resources */,
-				C513CAD81C5266F200991F2B /* sample.json in Resources */,
 				C50670971C4FAD5400F10E41 /* Assets.xcassets in Resources */,
 				C50670951C4FAD5400F10E41 /* Main.storyboard in Resources */,
 			);

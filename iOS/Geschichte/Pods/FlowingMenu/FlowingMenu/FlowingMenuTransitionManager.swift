@@ -89,6 +89,7 @@ public final class FlowingMenuTransitionManager: UIPercentDrivenInteractiveTrans
   
   /// Present menu animation.
   func presentMenu(menuView: UIView, otherView: UIView, containerView: UIView, status: FlowingMenuTransitionStatus, duration: NSTimeInterval, completion: () -> Void) {
+    
     // Composing the view
     let ov              = otherView.snapshotViewAfterScreenUpdates(true)
     ov.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -221,4 +222,9 @@ public final class FlowingMenuTransitionManager: UIPercentDrivenInteractiveTrans
         completion()
     }
   }
+    
+  /// Menu animation cancelled
+    public func flowingMenuTransitionCancelled() {
+        
+    }
 }

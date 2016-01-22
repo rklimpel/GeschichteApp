@@ -11,23 +11,23 @@ import JTMaterialTransition
 import SAConfettiView
 import FlowingMenu
 
-class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FlowingMenuDelegate {
+class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FlowingMenuDelegate, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet var flowingMenuTransitionManager: FlowingMenuTransitionManager!
+    
+    var menu: UIViewController?
+    var button: HamburgerButton!
     
     let PresentSegueName = "PresentMenuSegue"
     let mainColor = UIColor(red: 119.0/255.0, green: 84.0/255.0, blue: 72.0/255.0, alpha: 1.0)
     let derivatedColor = UIColor(red: 92.0/255.0, green: 64.0/255.0, blue: 56.0/255.0, alpha: 1.0)
     
-    var menu: UIViewController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIButton(frame: CGRectMake(0, 0, navigationBar.frame.height * 1.5, navigationBar.frame.height))
-        button.setImage(UIImage(named: ""), forState: UIControlState.Normal)
-        button.setImage(UIImage(named: ""), forState: UIControlState.Highlighted)
+        button = HamburgerButton(frame: CGRectMake(20, 15, navigationBar.frame.height * 1.5, navigationBar.frame.height))
         navigationBar.addSubview(button)
         
         flowingMenuTransitionManager.setInteractivePresentationView(view)
@@ -45,13 +45,41 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func showMenu() {
-        performSegueWithIdentifier("PresentMenuSegue", sender: self)
+        setButtonState(!button.showsMenu)
+        flowingMenuNeedsPresentMenu(flowingMenuTransitionManager)
+    }
+    
+    func setButtonState(state: Bool) {
+        self.button.showsMenu = !state
+    }
+    
+    func testShowArticle() {
+        let new = self.storyboard?.instantiateInitialViewController()
+        new?.modalPresentationStyle = UIModalPresentationStyle.Custom
+        new?.transitioningDelegate = self
+        self.presentViewController(new!, animated: true, completion: nil
+        )
+    }
+    
+    
+    // MARK: Transition Delegate
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = JTMaterialTransition(animatedView: self.navigationBar)
+        transition.reverse = false
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = JTMaterialTransition(animatedView: self.navigationBar)
+        transition.reverse = true
+        return transition
     }
     
     // MARK: - Interacting with Storyboards and Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == PresentSegueName {
+            
             let vc = segue.destinationViewController
             vc.transitioningDelegate = flowingMenuTransitionManager
             
@@ -78,43 +106,49 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func flowingMenuNeedsPresentMenu(flowingMenu: FlowingMenuTransitionManager) {
         performSegueWithIdentifier(PresentSegueName, sender: self)
+        
+        setButtonState(true)
     }
     
     func flowingMenuNeedsDismissMenu(flowingMenu: FlowingMenuTransitionManager) {
         menu?.dismissViewControllerAnimated(true, completion: nil)
+        setButtonState(false)
     }
-
+    
+    func flowingMenuTransitionCancelled() {
+        setButtonState(false)
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     // MARK: - Table View
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
+        
         return cell
     }
-
+    
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
-
+    
+    
 }
 

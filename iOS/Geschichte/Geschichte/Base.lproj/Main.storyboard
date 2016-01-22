@@ -9,7 +9,7 @@
         <!--Master View Controller-->
         <scene sceneID="rR5-ga-UNw">
             <objects>
-                <viewController id="gqz-Xa-YKb" customClass="MasterViewController" customModule="Geschichte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="master" id="gqz-Xa-YKb" customClass="MasterViewController" customModule="Geschichte" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QBg-NH-ddD"/>
                         <viewControllerLayoutGuide type="bottom" id="p1x-5M-i2B"/>
@@ -44,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="flowingMenuTransitionManager" destination="vQ3-62-FWO" id="0HM-Cs-mcH"/>
+                        <outlet property="navItem" destination="Hrc-OA-WQC" id="k6e-UO-g0M"/>
                         <outlet property="navigationBar" destination="HJG-x5-whU" id="mqm-eQ-1gR"/>
                         <segue destination="0QU-UV-wb2" kind="presentation" identifier="PresentMenuSegue" id="A2b-bO-3vD"/>
                     </connections>

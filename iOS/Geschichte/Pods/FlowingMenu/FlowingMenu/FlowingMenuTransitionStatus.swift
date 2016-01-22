@@ -31,7 +31,7 @@ import UIKit
  testable by providing a concevient way to access the
  `UIViewControllerContextTransitioning` `transitionWasCancelled` method.
 */
-final class FlowingMenuTransitionStatus {
+public final class FlowingMenuTransitionStatus {
   private let cancelled: Bool
   private let context: UIViewControllerContextTransitioning?
 

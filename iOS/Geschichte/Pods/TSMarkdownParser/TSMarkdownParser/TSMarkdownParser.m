@@ -232,7 +232,7 @@ static NSString *const TSMarkdownEmRegex        = @"([\\*|_]{1}).+?\\1";
         NSRange linkRange = NSMakeRange(linkStartInResult, match.range.length+match.range.location-linkStartInResult-1);
         NSString *linkURLString = [attributedString.string substringWithRange:NSMakeRange(linkRange.location+1, linkRange.length-1)];
         NSURL *url = [NSURL URLWithString:linkURLString] ?: [NSURL URLWithString:
-                                                             [linkURLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                                                             [linkURLString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
         
         NSUInteger linkTextEndLocation = [attributedString.string rangeOfString:@"]" options:0 range:match.range].location;
         NSRange linkTextRange = NSMakeRange(match.range.location, linkTextEndLocation-match.range.location-1);

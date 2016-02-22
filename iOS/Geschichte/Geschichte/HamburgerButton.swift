@@ -72,62 +72,71 @@ public class HamburgerButton: UIButton {
         return CGSize(width: width, height: height)
     }
     
-    public var showsMenu: Bool = true {
+    private var animating: Bool = false
+    
+    public var showsMenu: Bool = false {
         didSet {
-            // There's many animations so it's easier to set up duration and timing function at once.
-            CATransaction.begin()
-            CATransaction.setAnimationDuration(0.4)
-            CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(controlPoints: 0.4, 0.0, 0.2, 1.0))
             
-            let strokeStartNewValue: CGFloat = showsMenu ? 0.0 : 0.3
-            let positionPathControlPointY = bottomYPosition / 2
-            let verticalOffsetInRotatedState: CGFloat = 0.75
-            
-            
-            let topRotation = CAKeyframeAnimation(keyPath: "transform")
-            topRotation.values = rotationValuesFromTransform(top.transform,
-                endValue: showsMenu ? CGFloat(-M_PI - M_PI_4) : CGFloat(M_PI + M_PI_4))
-            // Kind of a workaround. Used because it was hard to animate positions of segments' such that their ends form the arrow's tip and don't cross each other.
-            topRotation.calculationMode = kCAAnimationCubic
-            topRotation.keyTimes = [0.0, 0.33, 0.73, 1.0]
-            top.ahk_applyKeyframeValuesAnimation(topRotation)
-            
-            let topPosition = CAKeyframeAnimation(keyPath: "position")
-            let topPositionEndPoint = CGPoint(x: width / 2, y: showsMenu ? topYPosition : bottomYPosition + verticalOffsetInRotatedState)
-            topPosition.path = quadBezierCurveFromPoint(top.position,
-                toPoint: topPositionEndPoint,
-                controlPoint: CGPoint(x: width, y: positionPathControlPointY)).CGPath
-            top.ahk_applyKeyframePathAnimation(topPosition, endValue: NSValue(CGPoint: topPositionEndPoint))
-            
-            top.strokeStart = strokeStartNewValue
-            
-            
-            let middleRotation = CAKeyframeAnimation(keyPath: "transform")
-            middleRotation.values = rotationValuesFromTransform(middle.transform,
-                endValue: showsMenu ? CGFloat(-M_PI) : CGFloat(M_PI))
-            middle.ahk_applyKeyframeValuesAnimation(middleRotation)
-            
-            middle.strokeEnd = showsMenu ? 1.0 : 0.85
-            
-            
-            let bottomRotation = CAKeyframeAnimation(keyPath: "transform")
-            bottomRotation.values = rotationValuesFromTransform(bottom.transform,
-                endValue: showsMenu ? CGFloat(-M_PI_2 - M_PI_4) : CGFloat(M_PI_2 + M_PI_4))
-            bottomRotation.calculationMode = kCAAnimationCubic
-            bottomRotation.keyTimes = [0.0, 0.33, 0.63, 1.0]
-            bottom.ahk_applyKeyframeValuesAnimation(bottomRotation)
-            
-            let bottomPosition = CAKeyframeAnimation(keyPath: "position")
-            let bottomPositionEndPoint = CGPoint(x: width / 2, y: showsMenu ? bottomYPosition : topYPosition - verticalOffsetInRotatedState)
-            bottomPosition.path = quadBezierCurveFromPoint(bottom.position,
-                toPoint: bottomPositionEndPoint,
-                controlPoint: CGPoint(x: 0, y: positionPathControlPointY)).CGPath
-            bottom.ahk_applyKeyframePathAnimation(bottomPosition, endValue: NSValue(CGPoint: bottomPositionEndPoint))
-            
-            bottom.strokeStart = strokeStartNewValue
-            
-            
-            CATransaction.commit()
+            if !animating {
+                // There's many animations so it's easier to set up duration and timing function at once.
+                self.animating = true
+                CATransaction.begin()
+                CATransaction.setAnimationDuration(0.4)
+                CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(controlPoints: 0.4, 0.0, 0.2, 1.0))
+                CATransaction.setCompletionBlock({ () -> Void in
+                    self.animating = false
+                })
+                
+                let strokeStartNewValue: CGFloat = showsMenu ? 0.0 : 0.3
+                let positionPathControlPointY = bottomYPosition / 2
+                let verticalOffsetInRotatedState: CGFloat = 0.75
+                
+                
+                let topRotation = CAKeyframeAnimation(keyPath: "transform")
+                topRotation.values = rotationValuesFromTransform(top.transform,
+                    endValue: showsMenu ? CGFloat(-M_PI - M_PI_4) : CGFloat(M_PI + M_PI_4))
+                // Kind of a workaround. Used because it was hard to animate positions of segments' such that their ends form the arrow's tip and don't cross each other.
+                topRotation.calculationMode = kCAAnimationCubic
+                topRotation.keyTimes = [0.0, 0.33, 0.73, 1.0]
+                top.ahk_applyKeyframeValuesAnimation(topRotation)
+                
+                let topPosition = CAKeyframeAnimation(keyPath: "position")
+                let topPositionEndPoint = CGPoint(x: width / 2, y: showsMenu ? topYPosition : bottomYPosition + verticalOffsetInRotatedState)
+                topPosition.path = quadBezierCurveFromPoint(top.position,
+                    toPoint: topPositionEndPoint,
+                    controlPoint: CGPoint(x: width, y: positionPathControlPointY)).CGPath
+                top.ahk_applyKeyframePathAnimation(topPosition, endValue: NSValue(CGPoint: topPositionEndPoint))
+                
+                top.strokeStart = strokeStartNewValue
+                
+                
+                let middleRotation = CAKeyframeAnimation(keyPath: "transform")
+                middleRotation.values = rotationValuesFromTransform(middle.transform,
+                    endValue: showsMenu ? CGFloat(-M_PI) : CGFloat(M_PI))
+                middle.ahk_applyKeyframeValuesAnimation(middleRotation)
+                
+                middle.strokeEnd = showsMenu ? 1.0 : 0.85
+                
+                
+                let bottomRotation = CAKeyframeAnimation(keyPath: "transform")
+                bottomRotation.values = rotationValuesFromTransform(bottom.transform,
+                    endValue: showsMenu ? CGFloat(-M_PI_2 - M_PI_4) : CGFloat(M_PI_2 + M_PI_4))
+                bottomRotation.calculationMode = kCAAnimationCubic
+                bottomRotation.keyTimes = [0.0, 0.33, 0.63, 1.0]
+                bottom.ahk_applyKeyframeValuesAnimation(bottomRotation)
+                
+                let bottomPosition = CAKeyframeAnimation(keyPath: "position")
+                let bottomPositionEndPoint = CGPoint(x: width / 2, y: showsMenu ? bottomYPosition : topYPosition - verticalOffsetInRotatedState)
+                bottomPosition.path = quadBezierCurveFromPoint(bottom.position,
+                    toPoint: bottomPositionEndPoint,
+                    controlPoint: CGPoint(x: 0, y: positionPathControlPointY)).CGPath
+                bottom.ahk_applyKeyframePathAnimation(bottomPosition, endValue: NSValue(CGPoint: bottomPositionEndPoint))
+                
+                bottom.strokeStart = strokeStartNewValue
+                
+                
+                CATransaction.commit()
+            }
         }
     }
     

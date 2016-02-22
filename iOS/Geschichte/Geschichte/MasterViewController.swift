@@ -31,6 +31,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         button = HamburgerButton(frame: CGRectMake(20, 15, navigationBar.frame.height * 1.5, navigationBar.frame.height))
+        button.addTarget(self, action: "showMenu", forControlEvents: UIControlEvents.TouchUpInside)
         navigationBar.addSubview(button)
         
         flowingMenuTransitionManager.setInteractivePresentationView(view)
@@ -40,6 +41,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationBar.barTintColor = derivatedColor
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationBar.layer.masksToBounds = false
+        navigationController?.hidesBarsOnSwipe = true
         
         let sb = UIView(frame: CGRectMake(0, 0, self.view.frame.width, 20))
         sb.backgroundColor = derivatedColor
@@ -48,27 +50,42 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload", name: ArticleSelectedNotification, object: nil)
         
         // Article setup
-        guard let article = Helper.sharedHelper.currentArticle else {print("damn");return}
-        print("Article: \(article.contents)")
+        var article: Article!
+        if let a = Helper.sharedHelper.currentArticle {
+            article = a
+        } else {
+            article = Article(section: "Geschichte", title: "Willkommen!", author: "Finn Gaida", contents: NSAttributedString(string: "Zieh vom linken Bildschirmrand um das Menü anzuzeigen und dann wähle einen Artikel."))
+        }
         
-        navItem.title = article.title
+        navItem.title = article.section
         
-        let margin:CGFloat = 10
+        let margin:CGFloat = 20
         let title = UILabel(frame: CGRectMake(margin, margin, scrollView.frame.width - margin * 2, 50))
         title.textAlignment = NSTextAlignment.Center
         title.textColor = UIColor.darkGrayColor()
-        title.font = UIFont(name: "AmericanTypewriter-Bold", size: 40)
+        title.font = UIFont(name: "Vollkorn-Bold", size: 30)
         title.text = article.title
         scrollView.addSubview(title)
         
-        let content = UILabel(frame: CGRectMake(margin, title.frame.origin.y + title.frame.height + margin, scrollView.frame.width - margin * 2, 300))
+        let font = UIFont(name: "Vollkorn", size: 20)
+        let height = font?.heightOfString(article.contents!, constrainedToWidth: title.frame.width)
+        let content = UILabel(frame: CGRectMake(margin, title.frame.origin.y + title.frame.height + margin, scrollView.frame.width - margin * 2, height!))
         content.textColor = UIColor.blackColor()
-        content.font = UIFont(name: "AmericanTypewriter", size: 20)
+        content.font = font
+        content.numberOfLines = 0
         content.lineBreakMode = NSLineBreakMode.ByWordWrapping
         content.textAlignment = NSTextAlignment.Justified
         content.attributedText = article.contents
         scrollView.addSubview(content)
         
+        scrollView.contentSize = CGSizeMake(scrollView.frame.width, height! + margin * 4 + title.frame.height)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        
+//        button.showsMenu = false
     }
     
     func reload() {
@@ -76,12 +93,8 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func showMenu() {
-        setButtonState(!button.showsMenu)
+        button.showsMenu = true
         flowingMenuNeedsPresentMenu(flowingMenuTransitionManager)
-    }
-    
-    func setButtonState(state: Bool) {
-        self.button.showsMenu = !state
     }
     
     func testShowArticle() {
@@ -138,20 +151,16 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func flowingMenuNeedsPresentMenu(flowingMenu: FlowingMenuTransitionManager) {
         performSegueWithIdentifier(PresentSegueName, sender: self)
         
-        setButtonState(true)
+        button.showsMenu = false
     }
     
     func flowingMenuNeedsDismissMenu(flowingMenu: FlowingMenuTransitionManager) {
         menu?.dismissViewControllerAnimated(true, completion: nil)
-        setButtonState(false)
+        button.showsMenu = false
     }
     
     func flowingMenuTransitionCancelled() {
-        setButtonState(false)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        button.showsMenu = false
     }
     
     override func didReceiveMemoryWarning() {

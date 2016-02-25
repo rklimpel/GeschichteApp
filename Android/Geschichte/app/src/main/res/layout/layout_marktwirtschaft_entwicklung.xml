@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Marktwirtschaft_entwicklung"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ausgangssituation"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Deutschland ist nach dem Krieg wirtschaftlich, politisch und gesellschaftlich stark geschwächt. Die Reichsmark ist fast wertlos, in Folge dessen floriert der Schwarzmarkt. Durch Knappheit sind Güter rationiert. Der deutsche Industrieapparat ist weniger stark zerstört, als zunächst vermutet. Aus dem ehemaligen Rüstungssektor gibt es viele gut ausgebildete Arbeitskräfte."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="April 1947"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Deutsche Währungsexperten gründen die Sonderstelle Geld und Kredit, um eine Währungsreform vorzubereiten. Den Vorsitz hat Ludwig Erhard."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="März 1948"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Die Alliierten gründen die Bank deutscher Länder. Sie ist die Vorgängerin der deutschen Bundesbank. Auf Geheiß der Besatzungsmächte kommt die geheime Konklave Roth-West (Konklave – in Anlehnung an geheime Papstwahl) zusammen. Experten aus Deutschland, USA, Frankreich und Großbritannien bereiten eine Währungsreform vor, obwohl vieles stark vorbestimmt ist und auch das Geld bereits gedruckt ist."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20. Juni 1948"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Die D-Mark wird ausgeteilt. Neben der Abwertung jedes Vermögens im Verhältnis 10:1 erhält jeder Bürger innerhalb eines Monats 60DM. Außerdem erloschen mit dem Verfall der Reichsmark alle Schulden des neuen deutschen Reiches und die Preisbindung und Rationierung wurde aufgehoben."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="23. Mai 1949"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Die Bundesrepublik Deutschland wird gegründet. Der knappe Sieg Adenauers und Erhards bedeutet auch einen knappen Sieg für die Marktwirtschaft. Die SPD, damals stärkste Oppositionspartei, schlug ein planwirtschaftliches System vor."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1950"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Die Koreakrise bedeutet einen enormen wirtschaftlichen Aufschwung in Deutschland. Durch das vorher dagewesene Rüstungsverbot hat die deutsche Wirtschaft anders als die der Westalliierten noch Kapazitäten in rüstungsnahen Industrien wie der Stahlproduktion. Deutschland steigt zur Exportmacht auf und wird wenig später Exportweltmeister"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Folgejahre"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="In den Folgejahren werden immer mehr soziale Reformen, wie das Rentenreformgesetz oder das Lastenausgleichgesetz erlassen. Auch die Gewerkschaften erstarken und erwirken den Kündigungsschutz und Ähnliches. Bis 1960 fällt die Arbeitslosenquote immer weiter, bis man Mitter der 60er mit einer Quote kleiner als 1 Prozent von Vollbeschäftigung in Deutschland spricht."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</LinearLayout>

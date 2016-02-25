@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Planwirtschaft_important"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zusammenfassung"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Bei der Planwirtschaft übernimmt der Staat (die Politik) die komplette Kontrolle über die Wirtschaft"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Die Planwirtschaft wurde vor allem in Kommunistischen System angewendet"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Grundidee: Gemeinwohl , Gleichheit aller Menschen ( Zusammengehörigkeit, Bruderschaft)"
+            android:textSize="20sp"
+            android:textIsSelectable="true"
+            android:singleLine="false"
+            android:elegantTextHeight="false"
+            android:breakStrategy="high_quality"
+            android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Es gibt nicht nur negative Aspekte!"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Geht meistens an Fehlplanungen zugrunde"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Heute nur noch in wenigen Ländern, da man nicht schnell genug auf die Veränderungen in der Marktwirtschaft der restlichen Welt reagieren kann"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

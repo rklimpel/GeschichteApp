@@ -18,7 +18,22 @@
 
         <include layout="@layout/layout_ubersicht"></include>
 
-        <include layout="@layout/layout_planwirtschaft_allgemein"></include>
+        <include layout="@layout/layout_planwirtschaft_kommentare"></include>
+
+        <include layout="@layout/layout_planwirtschaft_howto"></include>
+
+        <include layout="@layout/layout_planwirtschaft_definition"></include>
+
+        <include layout="@layout/layout_planwirtschaft_procon"></include>
+
+        <include layout="@layout/layout_planwirtschaft_important"></include>
+
+        <include layout="@layout/layout_planwirtschaft_ddr"></include>
+
+        <include layout="@layout/layout_marktwirtschaft_entwicklung"></include>
+
+        <include layout="@layout/layout_marktwirtschaft_grundlage"></include>
+
 
     </RelativeLayout>
 

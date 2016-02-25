@@ -2,74 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="/Users/ricoklimpel/AndroidStudioProjects/GeschichteApp/Android/Geschichte/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/5/main_slice.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_c353bb2a0a30b7a396fab79d8efc82fb641753ed.jar" />
+        sha1="61102c7334a2cbbc90e0e747c4cb9d4cc6e1bf1e">
+        <dex dex="/Users/ricoklimpel/AndroidStudioProjects/GeschichteApp/Android/Geschichte/app/build/intermediates/transforms/dex/debug/folders/1000/5/main_slice_d8209239a130c7fcfad273e102dfcecdf8e0ed37/classes.dex" />
     </item>
     <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jar="/Users/ricoklimpel/AndroidStudioProjects/GeschichteApp/Android/Geschichte/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/1a/dependencies.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_98828b90ac3342f4021f474a93c15b3375a4a7ee.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_12a5ea0d37488e14546678eb0e6b34f93a5038f0.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.1.1_0bf5594c3f161ba3ef6c89ae8ebd0da692cfd8c7.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_cac25a95497ec9348c48c1fe5482e0879b4ef95e.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.daimajia.androidanimations/library/1.1.3/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8cec50fc9cc847bad0d6ed7d93814f4b34744521">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.daimajia.androidanimations-library-1.1.3_026d1e94f18859063fe79583b89a4086458d3d9a.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_bdc2d9756c5605fd935bb57be18334b65efdbb02.jar" />
-    </item>
-    <item
-        jar="/Users/fga/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/library-2.4.0_135140f0515d1ed7f008341d17c16a31aa1a1d80.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/exploded-aar/com.daimajia.easing/library/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="d7e947f993bf32a00fcb3078cdda8bb11c930afb">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/com.daimajia.easing-library-1.0.1_b26ed554695594b18d7953acc250af74da134b0a.jar" />
-    </item>
-    <item
-        jar="/Users/fga/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/fga/Documents/Apps/Clones/GeschichteApp/Android/Geschichte/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_25e5e25a04f5b688887bfb99ad125c6d55dc150e.jar" />
+        sha1="2f7bc770e3a126a68b33d622d5068411fc6d750f">
+        <dex dex="/Users/ricoklimpel/AndroidStudioProjects/GeschichteApp/Android/Geschichte/app/build/intermediates/transforms/dex/debug/folders/1000/1a/dependencies_eb10269edf841399526d203d8080568198560d3d/classes.dex" />
     </item>
 
 </items>

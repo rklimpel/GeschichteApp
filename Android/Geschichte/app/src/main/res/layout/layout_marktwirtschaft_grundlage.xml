@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Marktwirtschaft_grundlage"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4 Grundsätze der sozialen Marktwirtschaft nach Erhard"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/tV_content"
+                android:text="1. Wettbewerbsfreiheit\nJeder darf produzieren, was er möchte, wie viel er möchte und es zu einem von ihm gewählten Preis verkaufen."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="2. Sozialprinzip\nEs soll Wohlstand für alle erreicht werden, ohne eine „soziale Hängematte“. Der Anreiz zur Arbeit soll erhalten bleiben."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="3. Konjunkturpolitisches Konzept\nDer Staat soll zu starke Schwankungen in der Wirtschaft vermeiden, den Geldwert aufrechterhalten und wirtschaftspolitische Beziehungen zum Ausland knüpfen."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="4. Marktkonformitätsprinzip\nDer Staat reguliert lediglich und leitet die Wirtschaft nicht. Jeder zu starke Eingriff ist zu vermeiden. Am Markt sollen nur die Unternehmen überleben, die aus eigener Kraft wettbewerbsfähig sind."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>

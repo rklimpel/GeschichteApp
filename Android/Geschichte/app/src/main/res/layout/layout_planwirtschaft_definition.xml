@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Planwirtschaft_definition"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Definition 'Planwirtschaft'"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/tV_content"
+                android:text="'Planwirtschaft (besser: Zentralverwaltungswirtschaft) bezeichnet eine Wirtschaftsordnung, in der die ökonomischen Prozesse einer Volkswirtschaft, insbesondere die Produktion und die Verteilung von Gütern und Dienstleistungen planmäßig und zentral gesteuert werden. Eine Planwirtschaft ist hierarchisch aufgebaut, d. h. die Einzelpläne der Wirtschaftssubjekte (Haushalte, Betriebe) müssen sich dem (politisch beschlossenen und i. d. R. als Gesetz verkündeten) Gesamtplan unterordnen. '"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

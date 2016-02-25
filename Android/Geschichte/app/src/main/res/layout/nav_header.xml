@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mauerbau \nPlan &amp; Marktwischtaft"
+            android:text="Planwirtschaft &amp; Soziale Marktwischtaft"
             android:id="@+id/textView"
             android:textSize="20sp" />
 

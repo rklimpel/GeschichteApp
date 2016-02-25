@@ -6,56 +6,49 @@
         android:icon="@drawable/ic_filter_list_white_24dp"
         android:id="@+id/nav_menu_übersicht"></item>
 
+
     <group
         android:checkableBehavior="single">
 
+        <!--
 
-        <item android:title="Mauerbau">
+
+      <item android:title="Mauerbau">
+          <menu>
+              <item
+                  android:id="@+id/nav_share2"
+
+                  android:title="System" />
+              <item
+                  android:id="@+id/nav_send3"
+
+                  android:title="Persönlichkeiten" />
+
+              <item
+                  android:id="@+id/nav_asdf4"
+
+                  android:title="Wirtschaftliche Folgen" />
+
+              <item
+                  android:id="@+id/nav_sendasdf5"
+
+                  android:title="Internationales" />
+          </menu>
+      </item>
+
+
+-->
+
+        <item android:title="Soziale Marktwirtschaft">
             <menu>
                 <item
-                    android:id="@+id/nav_share2"
+                    android:id="@+id/nav_menu_marktwirtschaft_grundlagen"
 
-                    android:title="System" />
+                    android:title="Grundsätze (nach Erhard)" />
                 <item
-                    android:id="@+id/nav_send3"
+                    android:id="@+id/nav_menu_marktwirtschaft_entwicklung"
 
-                    android:title="Persönlichkeiten" />
-
-                <item
-                    android:id="@+id/nav_asdf4"
-
-                    android:title="Wirtschaftliche Folgen" />
-
-                <item
-                    android:id="@+id/nav_sendasdf5"
-
-                    android:title="Internationales" />
-            </menu>
-        </item>
-
-
-
-
-        <item android:title="Marktwirtschaft">
-            <menu>
-                <item
-                    android:id="@+id/nav_share1"
-
-                    android:title="System" />
-                <item
-                    android:id="@+id/nav_send2"
-
-                    android:title="Persönlichkeiten" />
-
-                <item
-                    android:id="@+id/nav_asdf3"
-
-                    android:title="Wirtschaftliche Folgen" />
-
-                <item
-                    android:id="@+id/nav_sendasdf4"
-
-                    android:title="Internationales" />
+                    android:title="Wirtschaftsentwicklung BRD" />
             </menu>
         </item>
 
@@ -67,21 +60,31 @@
                 <item
                     android:id="@+id/nav_menu_planwirtschaft_allgmein"
 
-                    android:title="Allgemein" />
+                    android:title="Kommentare zur Planwirtschaft" />
                 <item
-                    android:id="@+id/nav_send"
+                    android:id="@+id/nav_menu_planwirtschaft_definition"
 
-                    android:title="Persönlichkeiten" />
-
-                <item
-                    android:id="@+id/nav_asdf"
-
-                    android:title="Wirtschaftliche Folgen" />
+                    android:title="Definition" />
 
                 <item
-                    android:id="@+id/nav_sendasdf"
+                    android:id="@+id/nav_menu_planwirtschaft_howto"
 
-                    android:title="Internationales" />
+                    android:title="Wie funktioniert Planwirtschaft" />
+
+                <item
+                    android:id="@+id/nav_menu_planwirtschaft_procontra"
+
+                    android:title="Vorteile und Nachteile" />
+
+                <item
+                    android:id="@+id/nav_menu_planwirtschaft_ddr"
+
+                    android:title="Planwirtschaft in der DDR und heute" />
+
+                <item
+                    android:id="@+id/nav_menu_planwirtschaft_important"
+
+                    android:title="Zusammenfassung / Wichtiges" />
             </menu>
         </item>
 

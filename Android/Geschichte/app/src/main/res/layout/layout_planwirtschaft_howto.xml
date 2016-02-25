@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Planwirtschaft_howto"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wie funktioniert eine Planwirtschaft?"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/tV_content"
+                android:text="Der Staat ermittelt die Bedürfnisse und verteilt die produzierten Güter gerecht\n"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Der Staat definiert, welche Produkte hergestellt und angebaut werden müssen"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Die zu erbringenden Dienstleistungen werden genau fixiert\n"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Volkswirtschaftlichen Ziele werden in entsprechenden Perspektivplänen festgelegt\n"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Politische Instanzen legen diese Ziele für fünf bis sieben Jahre fest\n"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Auflistungen der Wege und Mittel, wie die Vorhaben und Ziele entsprechend umgesetzt werden sollen.\n"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Grundidee: Gemeinwohl , gleichheit aller Menschen (Zusammengehörigkeit , Bruderschaft)"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Kommunisten glaubten lange an die Planwirtschaft"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Haushalte und Unternehmen müssen sich dem politischen Plan unterordnen"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Angebot und Nachfrage spielen eine Untergeordnete Rolle"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Länderein und Betriebe sind Staatseigentum"
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="normal" />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

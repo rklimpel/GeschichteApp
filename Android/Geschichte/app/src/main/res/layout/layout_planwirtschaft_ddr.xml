@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout_Planwirtschaft_ddr"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planwirtschaft Heute"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/tV_content"
+                android:text="In der heutigen Zeit gibt es nur noch wenige Länder, die das System der Planwirtschaft nutzen. Unter anderem aber Kuba und Nordkorea. Auch China zeigt noch Züge einer Planwirtschaft."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/cuba_flag"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/nordkorea_flag"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/china_flag"
+                android:scaleType="fitCenter" />
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planwirtschaft in der DDR"
+                android:textSize="30sp"
+                android:layout_margin="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Eigentlich hatten die Siegermächte des 2.Weltkrieges sich darauf festgelegt, Deutschland als Wirtschaftlich-Komplett zu lassen, im Zuge des Kalten Krieges entfernten sich die Besatzungsmächte allerdings voneinander und die Sowjetunion konnte ihre reformen in der DDR durchsetzen.\nZunächst wurden Banken, Versicherungen und große Industriebetriebe verstaatlicht. Später kamen auch immer mehr kleinere Betriebe hinzu.\nIn der DDR wurde ein Fünfjahresplan genutzt, der von einem Büro in Berlin Entworfen wurde. Alle Deutschen Pläne mussten aber von der Sowjetunion konrolliert werden und wurden zum Teil auch nach deren Willen geändert.\nAlle Preise wurden vom Staat festgelegt, was zwar für eine gute Grundversorgung, die praktisch durch den Staat finanziert wurde sorgte, allerdings die Währung instabil werden ließ und den Staatshaushalt enorm schwächte. Es wanderten aufgrund der festgefahrenen Wirtschaft auch viele Fachkräfte nach Westdeutschland ab. Insgesamt wurde durch viele Fehlplanungen und die Ausbeutenden Befehle der Sowjets für das deutsche Wirtschaftssystem der Aparat so geschwächt, das es letztenendes zum Mauerfall kam und auch der Osten Deutschlands wieder die Marktwirtschaft annahm."
+                android:textSize="20sp"
+                android:textIsSelectable="true"
+                android:singleLine="false"
+                android:elegantTextHeight="false"
+                android:breakStrategy="high_quality"
+                android:textStyle="italic" />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>

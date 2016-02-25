@@ -8,8 +8,11 @@
     android:id="@+id/Layout_Ubersicht"
     android:orientation="vertical">
 
+
+
     <!--Mauerbau Menu-->
 
+    <!--
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -78,6 +81,8 @@
         android:background="@color/icons"
         android:text="Anlässe zum Mauerbau"/>
 
+        -->
+
 
     <!--Marktwirtschaft Menu-->
 
@@ -92,7 +97,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Marktwirtschaft"
+            android:text="Soziale Marktwirtschaft"
             android:textSize="30sp"
             android:textAlignment="center"
             android:gravity="center" />
@@ -112,43 +117,16 @@
         android:layout_height="80dp"
         android:elevation="10dp"
         android:background="@color/icons"
-        android:text="Über das System"/>
+        android:id="@+id/btn_markt_grundsätze"
+        android:text="Grundsätze (nach Erhard)"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:elevation="10dp"
         android:background="@color/icons"
-        android:text="Geschichte des Systemss"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Planwirtschaft in der DDR"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Personen"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Vorteile und Nachteile"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:background="@color/icons"
-        android:text="Planwirtschaft heute"/>
-
+        android:id="@+id/btn_markt_entwicklung"
+        android:text="Wirtschaftsentwicklung BRD"/>
 
 
     <ImageView
@@ -191,35 +169,31 @@
             android:layout_height="80dp"
             android:elevation="10dp"
             android:background="@color/icons"
-            android:id="@+id/übersicht_planwirtschaft_allgmein"
-            android:text="Allgemein"/>
+            android:id="@+id/btn_plan_kommentare"
+            android:text="Kommentare zur Planwirtschaft"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:elevation="10dp"
             android:background="@color/icons"
-            android:text="Geschichte des Systemss"/>
+            android:id="@+id/btn_plan_definition"
+            android:text="Definition"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:elevation="10dp"
             android:background="@color/icons"
-            android:text="Planwirtschaft in der DDR"/>
+            android:id="@+id/btn_plan_howto"
+            android:text="Wie funktioniert Planwirtschaft?"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:elevation="10dp"
             android:background="@color/icons"
-            android:text="Personen"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:elevation="10dp"
-            android:background="@color/icons"
+            android:id="@+id/btn_plan_procon"
             android:text="Vorteile und Nachteile"/>
 
         <Button
@@ -227,7 +201,16 @@
             android:layout_height="80dp"
             android:elevation="10dp"
             android:background="@color/icons"
-            android:text="Planwirtschaft heute"/>
+            android:id="@+id/btn_plan_ddr"
+            android:text="Planwirtschaft in der DDR und heute"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="10dp"
+            android:background="@color/icons"
+            android:id="@+id/btn_plan_important"
+            android:text="Zusammenfassung / Wichtiges"/>
 
 
     <ImageView

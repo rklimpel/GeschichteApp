@@ -1,11 +1,7 @@
 package de.ricoklimpel.geschichte;
 
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -44,7 +40,14 @@ public class Activity_Content extends AppCompatActivity
     LinearLayout Layout_About;
     LinearLayout Layout_Ubersicht;
     LinearLayout layout_now;
-    LinearLayout Layout_planwirtschaft_allgmein;
+    LinearLayout Layout_planwirtschaft_kommentare;
+    LinearLayout Layout_planwirtschaft_howto;
+    LinearLayout Layout_planwirtschaft_definition;
+    LinearLayout Layout_planwirtschaft_procon;
+    LinearLayout Layout_planwirtschaft_ddr;
+    LinearLayout Layout_planwirtschaft_important;
+    LinearLayout Layout_marktwirtschaft_grundlage;
+    LinearLayout Layout_marktwirtschaft_entwicklung;
     NestedScrollView Nestedt_Scroll;
 
     CollapsingToolbarLayout CTL;
@@ -62,17 +65,39 @@ public class Activity_Content extends AppCompatActivity
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         fab = (FloatingActionButton)findViewById(R.id.fab);
+        Nestedt_Scroll = (NestedScrollView)findViewById(R.id.Nested_Scroll);
 
         CTL = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar_layout);
 
         Layout_About = (LinearLayout)findViewById(R.id.Layout_About);
         Layout_Ubersicht = (LinearLayout)findViewById(R.id.Layout_Ubersicht);
-        Layout_planwirtschaft_allgmein = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_allgemein);
-        Nestedt_Scroll = (NestedScrollView)findViewById(R.id.Nested_Scroll);
+        Layout_planwirtschaft_kommentare = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_kommentare);
+        Layout_planwirtschaft_howto = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_howto);
+        Layout_planwirtschaft_definition = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_definition);
+        Layout_planwirtschaft_procon = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_procon);
+        Layout_planwirtschaft_ddr = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_ddr);
+        Layout_planwirtschaft_important = (LinearLayout)findViewById(R.id.Layout_Planwirtschaft_important);
+
+        Layout_marktwirtschaft_entwicklung = (LinearLayout)findViewById(R.id.Layout_Marktwirtschaft_entwicklung);
+        Layout_marktwirtschaft_grundlage = (LinearLayout)findViewById(R.id.Layout_Marktwirtschaft_grundlage);
+
+
+
 
         Layout_About.setVisibility(View.VISIBLE);
-        Layout_planwirtschaft_allgmein.setVisibility(View.GONE);
+
+        Layout_planwirtschaft_kommentare.setVisibility(View.GONE);
         Layout_Ubersicht.setVisibility(View.GONE);
+        Layout_planwirtschaft_howto.setVisibility(View.GONE);
+        Layout_planwirtschaft_definition.setVisibility(View.GONE);
+        Layout_planwirtschaft_procon.setVisibility(View.GONE);
+        Layout_planwirtschaft_ddr.setVisibility(View.GONE);
+        Layout_planwirtschaft_important.setVisibility(View.GONE);
+        Layout_marktwirtschaft_grundlage.setVisibility(View.GONE);
+        Layout_marktwirtschaft_entwicklung.setVisibility(View.GONE);
+
+
+
 
         layout_now = Layout_About;
 
@@ -100,7 +125,13 @@ public class Activity_Content extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (layout_now == Layout_About){
+                super.onBackPressed();
+            }else if(layout_now == Layout_Ubersicht){
+                set_layout_about();
+            }else{
+                set_layout_übersicht();
+            }
         }
     }
 
@@ -135,10 +166,22 @@ public class Activity_Content extends AppCompatActivity
 
         if (id == R.id.nav_menu_planwirtschaft_allgmein) {
             set_layout_planwirtschaft_allgemein();
-
         } else if (id == R.id.nav_menu_übersicht) {
             set_layout_übersicht();
-
+        } else if (id == R.id.nav_menu_planwirtschaft_ddr){
+            set_layout_planwirtschaft_ddr();
+        } else if (id == R.id.nav_menu_planwirtschaft_howto){
+            set_layout_planwirtschaft_howto();
+        } else if (id == R.id.nav_menu_planwirtschaft_definition){
+            set_layout_planwirtschaft_definition();
+        } else if (id == R.id.nav_menu_planwirtschaft_procontra){
+            set_layout_planwirtschaft_procon();
+        } else if (id == R.id.nav_menu_planwirtschaft_important){
+            set_layout_planwirtschaft_important();
+        } else if (id == R.id.nav_menu_marktwirtschaft_entwicklung){
+            set_layout_marktwirtschaft_entwicklung();
+        } else if (id == R.id.nav_menu_marktwirtschaft_grundlagen){
+            set_layout_marktwirtschaft_grundlage();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -204,12 +247,192 @@ public class Activity_Content extends AppCompatActivity
 
     private void set_layout_planwirtschaft_allgemein(){
 
-        if(layout_now != Layout_planwirtschaft_allgmein){
+        if(layout_now != Layout_planwirtschaft_kommentare){
 
 
-            Layout_Transition(layout_now,Layout_planwirtschaft_allgmein, AnimIn,AnimOut,AnimDuration);
-            layout_now = Layout_planwirtschaft_allgmein;
-            CTL.setTitle("Allgmein");
+            Layout_Transition(layout_now, Layout_planwirtschaft_kommentare, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_kommentare;
+            CTL.setTitle("Kommentare");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+    private void set_layout_planwirtschaft_howto(){
+
+        if(layout_now != Layout_planwirtschaft_howto){
+
+
+            Layout_Transition(layout_now, Layout_planwirtschaft_howto, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_howto;
+            CTL.setTitle("Wie Planen die?");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+
+    private void set_layout_planwirtschaft_definition(){
+
+        if(layout_now != Layout_planwirtschaft_definition){
+
+
+            Layout_Transition(layout_now, Layout_planwirtschaft_definition, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_definition;
+            CTL.setTitle("Definition");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+    private void set_layout_planwirtschaft_procon(){
+
+        if(layout_now != Layout_planwirtschaft_procon){
+
+
+            Layout_Transition(layout_now, Layout_planwirtschaft_procon, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_procon;
+            CTL.setTitle("Vor-und Nachteile");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+    private void set_layout_planwirtschaft_ddr(){
+
+        if(layout_now != Layout_planwirtschaft_ddr){
+
+
+            Layout_Transition(layout_now, Layout_planwirtschaft_ddr, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_ddr;
+            CTL.setTitle("In der DDR und Heute");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+
+    private void set_layout_planwirtschaft_important(){
+
+        if(layout_now != Layout_planwirtschaft_important){
+
+
+            Layout_Transition(layout_now, Layout_planwirtschaft_important, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_planwirtschaft_important;
+            CTL.setTitle("Wichtiges / Zusammenfassung");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+
+    private void set_layout_marktwirtschaft_entwicklung(){
+
+        if(layout_now != Layout_marktwirtschaft_entwicklung){
+
+
+            Layout_Transition(layout_now, Layout_marktwirtschaft_entwicklung, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_marktwirtschaft_entwicklung;
+            CTL.setTitle("BRD - Marktwirtschaft Entwicklung");
+
+            Nestedt_Scroll.scrollTo(0,-10);
+
+            fab.setImageResource(R.drawable.ic_filter_list_white_24dp);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    set_layout_übersicht();
+                    FAB_press_animation();
+
+                }
+            });
+
+        }
+    }
+
+
+
+    private void set_layout_marktwirtschaft_grundlage(){
+
+        if(layout_now != Layout_marktwirtschaft_grundlage){
+
+
+            Layout_Transition(layout_now, Layout_marktwirtschaft_grundlage, AnimIn,AnimOut,AnimDuration);
+            layout_now = Layout_marktwirtschaft_grundlage;
+            CTL.setTitle("Grundlagen");
 
             Nestedt_Scroll.scrollTo(0,-10);
 
@@ -300,12 +523,61 @@ public class Activity_Content extends AppCompatActivity
 
     private void übersicht_menu_click(){
 
-        Button Übersicht_Planwirtschaft_Allgmein = (Button)findViewById(R.id.übersicht_planwirtschaft_allgmein);
+        Button btn_plan_kommentare = (Button)findViewById(R.id.btn_plan_kommentare);
+        Button btn_plan_definition = (Button)findViewById(R.id.btn_plan_definition);
+        Button btn_plan_howto = (Button)findViewById(R.id.btn_plan_howto);
+        Button btn_plan_procon = (Button)findViewById(R.id.btn_plan_procon);
+        Button btn_plan_ddr = (Button)findViewById(R.id.btn_plan_ddr);
+        Button btn_plan_important = (Button)findViewById(R.id.btn_plan_important);
+        Button btn_markt_grundlagen = (Button)findViewById(R.id.btn_markt_grundsätze);
+        Button btn_markt_entwicklung = (Button)findViewById(R.id.btn_markt_entwicklung);
 
-        Übersicht_Planwirtschaft_Allgmein.setOnClickListener(new View.OnClickListener() {
+        btn_markt_entwicklung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_marktwirtschaft_entwicklung();
+            }
+        });
+        btn_markt_grundlagen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_marktwirtschaft_grundlage();
+            }
+        });
+        btn_plan_kommentare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 set_layout_planwirtschaft_allgemein();
+            }
+        });
+        btn_plan_definition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_planwirtschaft_definition();
+            }
+        });
+        btn_plan_howto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_planwirtschaft_howto();
+            }
+        });
+        btn_plan_procon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_planwirtschaft_procon();
+            }
+        });
+        btn_plan_ddr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_planwirtschaft_ddr();
+            }
+        });
+        btn_plan_important.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                set_layout_planwirtschaft_important();
             }
         });
 

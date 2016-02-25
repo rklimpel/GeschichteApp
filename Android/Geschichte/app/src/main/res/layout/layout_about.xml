@@ -13,9 +13,9 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="6dp">
+        android:layout_margin="15dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Info für Tester"
+                android:text="Info"
                 android:textSize="25sp"
                 android:layout_margin="16dp" />
 
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="Bis jetzt funktionieren nur die Übersicht, sowie die Über die App seite und das Allgmeinwissen zu Planwirtschaft. Ansonsten sind nur die Menüs fertiggestellt, da die Infos noch fehlen."
+                android:text="Herzlich Willkommen!\nIn diese App kannst du dich über die Planwirtschaft in der DDR und die Soziale Marktwirtschaft in der BRD informieren und auch einige allgemeine Informationen zu den beiden System betrachten.\nAls Deutschland nach dem zweiten Weltkreig in die Unterschiedlichen Besatzungzonen aufgespalten wurde ist durch den Einfluss der Besatzer ein großer Unterschied in Politik und Wirtschaft der beidne Deutschen Hälften entstanden. Auch heute können wir uns der Auswirkungen der Deutschen Teilung immer wieder bewusst werden uns sie auch teilweise noch klar sehen."
                 android:layout_margin="16dp" />
 
 
@@ -47,58 +47,12 @@
     </android.support.v7.widget.CardView>
 
 
-
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="6dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="App statt Powerpoint"
-            android:textSize="25sp"
-            android:layout_margin="16dp" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:src="@color/divider" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:id="@+id/tV_content"
-            android:textSize="16sp"
-            android:text="@string/long_text_about" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:src="@color/divider" />
-
-
-    </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="6dp">
+        android:layout_margin="15dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,7 +62,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Die Urheber dieser Infos"
+                android:text="Handout als App"
                 android:textSize="25sp"
                 android:layout_margin="16dp" />
 

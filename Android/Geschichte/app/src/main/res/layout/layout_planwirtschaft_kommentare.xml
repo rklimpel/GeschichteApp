@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Was fällt ihnen ein wenn sie an die DDR Planwirtschaft zurückdenken? - Kommentare"
+                android:text="Was fällt Ihnen ein wenn Sie an die DDR Planwirtschaft zurückdenken? - Kommentare"
                 android:textSize="30sp"
                 android:layout_margin="16dp" />
 

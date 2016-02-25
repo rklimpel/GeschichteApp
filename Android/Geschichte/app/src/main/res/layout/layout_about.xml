@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="Herzlich Willkommen!\nIn diese App kannst du dich über die Planwirtschaft in der DDR und die Soziale Marktwirtschaft in der BRD informieren und auch einige allgemeine Informationen zu den beiden System betrachten.\nAls Deutschland nach dem zweiten Weltkreig in die Unterschiedlichen Besatzungzonen aufgespalten wurde ist durch den Einfluss der Besatzer ein großer Unterschied in Politik und Wirtschaft der beidne Deutschen Hälften entstanden. Auch heute können wir uns der Auswirkungen der Deutschen Teilung immer wieder bewusst werden uns sie auch teilweise noch klar sehen."
+                android:text="Herzlich Willkommen!\nIn diese App kannst du dich über die Planwirtschaft in der DDR und die Soziale Marktwirtschaft in der BRD informieren und auch einige allgemeine Informationen zu den beiden System betrachten.\nAls Deutschland nach dem zweiten Weltkreig in die Unterschiedlichen Besatzungzonen aufgespalten wurde ist durch den Einfluss der Besatzer ein großer Unterschied in Politik und Wirtschaft der beiden deutschen Hälften entstanden. Auch heute können wir uns der Auswirkungen der deutschen Teilung immer wieder bewusst werden uns sie auch teilweise noch klar sehen."
                 android:layout_margin="16dp" />
 
 
@@ -74,7 +74,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Finn Gaida \nRico Klimpel \nMalte Hobe"
+                android:text="Diese App ist als Handout zu einem Referat gedacht, das wir am 23.02.16 im Geschichtsunterricht gehalten haben.\n\nFinn Gaida \nRico Klimpel \nMalte Hobe"
                 android:textSize="16sp"
                 android:layout_margin="16dp" />
 

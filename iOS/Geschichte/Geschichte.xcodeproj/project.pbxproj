@@ -15,6 +15,16 @@
 		C506709A1C4FAD5400F10E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C50670981C4FAD5400F10E41 /* LaunchScreen.storyboard */; };
 		C513CAD41C5135EE00991F2B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD31C5135EE00991F2B /* MenuViewController.swift */; };
 		C513CAD61C516E2100991F2B /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD51C516E2100991F2B /* HamburgerButton.swift */; };
+		C513CADA1C52685C00991F2B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513CAD91C52685C00991F2B /* Helper.swift */; };
+		C535CFDA1C7B6D3800168926 /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = C535CFD91C7B6D3800168926 /* index.json */; };
+		C535CFE41C7B705400168926 /* Vollkorn-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFDC1C7B705400168926 /* Vollkorn-Bold.ttf */; };
+		C535CFE51C7B705400168926 /* Vollkorn-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFDD1C7B705400168926 /* Vollkorn-BoldItalic.ttf */; };
+		C535CFE61C7B705400168926 /* Vollkorn-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFDE1C7B705400168926 /* Vollkorn-Italic.ttf */; };
+		C535CFE71C7B705400168926 /* Vollkorn-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFDF1C7B705400168926 /* Vollkorn-Medium.ttf */; };
+		C535CFE81C7B705400168926 /* Vollkorn-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFE01C7B705400168926 /* Vollkorn-MediumItalic.ttf */; };
+		C535CFE91C7B705400168926 /* Vollkorn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFE11C7B705400168926 /* Vollkorn-Regular.ttf */; };
+		C535CFEA1C7B705400168926 /* Vollkorn-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFE21C7B705400168926 /* Vollkorn-Semibold.ttf */; };
+		C535CFEB1C7B705400168926 /* Vollkorn-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C535CFE31C7B705400168926 /* Vollkorn-SemiboldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +39,17 @@
 		C506709B1C4FAD5400F10E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C513CAD31C5135EE00991F2B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C513CAD51C516E2100991F2B /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		C513CAD91C52685C00991F2B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C535CFD91C7B6D3800168926 /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
+		C535CFDC1C7B705400168926 /* Vollkorn-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Bold.ttf"; sourceTree = "<group>"; };
+		C535CFDD1C7B705400168926 /* Vollkorn-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C535CFDE1C7B705400168926 /* Vollkorn-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Italic.ttf"; sourceTree = "<group>"; };
+		C535CFDF1C7B705400168926 /* Vollkorn-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Medium.ttf"; sourceTree = "<group>"; };
+		C535CFE01C7B705400168926 /* Vollkorn-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C535CFE11C7B705400168926 /* Vollkorn-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Regular.ttf"; sourceTree = "<group>"; };
+		C535CFE21C7B705400168926 /* Vollkorn-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Semibold.ttf"; sourceTree = "<group>"; };
+		C535CFE31C7B705400168926 /* Vollkorn-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		C58179F51C5547440085283D /* Geschichte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Geschichte.entitlements; sourceTree = "<group>"; };
 		E8CE63316A082DA55B2CBF48 /* Pods_Geschichte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geschichte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,16 +103,35 @@
 		C506708C1C4FAD5400F10E41 /* Geschichte */ = {
 			isa = PBXGroup;
 			children = (
+				C535CFDB1C7B705400168926 /* Vollkorn */,
+				C58179F51C5547440085283D /* Geschichte.entitlements */,
+				C535CFD91C7B6D3800168926 /* index.json */,
 				C513CAD51C516E2100991F2B /* HamburgerButton.swift */,
 				C506708D1C4FAD5400F10E41 /* AppDelegate.swift */,
 				C506708F1C4FAD5400F10E41 /* MasterViewController.swift */,
 				C513CAD31C5135EE00991F2B /* MenuViewController.swift */,
+				C513CAD91C52685C00991F2B /* Helper.swift */,
 				C50670931C4FAD5400F10E41 /* Main.storyboard */,
 				C50670961C4FAD5400F10E41 /* Assets.xcassets */,
 				C50670981C4FAD5400F10E41 /* LaunchScreen.storyboard */,
 				C506709B1C4FAD5400F10E41 /* Info.plist */,
 			);
 			path = Geschichte;
+			sourceTree = "<group>";
+		};
+		C535CFDB1C7B705400168926 /* Vollkorn */ = {
+			isa = PBXGroup;
+			children = (
+				C535CFDC1C7B705400168926 /* Vollkorn-Bold.ttf */,
+				C535CFDD1C7B705400168926 /* Vollkorn-BoldItalic.ttf */,
+				C535CFDE1C7B705400168926 /* Vollkorn-Italic.ttf */,
+				C535CFDF1C7B705400168926 /* Vollkorn-Medium.ttf */,
+				C535CFE01C7B705400168926 /* Vollkorn-MediumItalic.ttf */,
+				C535CFE11C7B705400168926 /* Vollkorn-Regular.ttf */,
+				C535CFE21C7B705400168926 /* Vollkorn-Semibold.ttf */,
+				C535CFE31C7B705400168926 /* Vollkorn-SemiboldItalic.ttf */,
+			);
+			path = Vollkorn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +169,15 @@
 				TargetAttributes = {
 					C50670891C4FAD5400F10E41 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PTHJ3DNH6P;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -157,7 +206,16 @@
 			files = (
 				C506709A1C4FAD5400F10E41 /* LaunchScreen.storyboard in Resources */,
 				C50670971C4FAD5400F10E41 /* Assets.xcassets in Resources */,
+				C535CFE51C7B705400168926 /* Vollkorn-BoldItalic.ttf in Resources */,
+				C535CFDA1C7B6D3800168926 /* index.json in Resources */,
+				C535CFE71C7B705400168926 /* Vollkorn-Medium.ttf in Resources */,
 				C50670951C4FAD5400F10E41 /* Main.storyboard in Resources */,
+				C535CFE61C7B705400168926 /* Vollkorn-Italic.ttf in Resources */,
+				C535CFE81C7B705400168926 /* Vollkorn-MediumItalic.ttf in Resources */,
+				C535CFEB1C7B705400168926 /* Vollkorn-SemiboldItalic.ttf in Resources */,
+				C535CFE91C7B705400168926 /* Vollkorn-Regular.ttf in Resources */,
+				C535CFEA1C7B705400168926 /* Vollkorn-Semibold.ttf in Resources */,
+				C535CFE41C7B705400168926 /* Vollkorn-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +276,7 @@
 			files = (
 				C50670901C4FAD5400F10E41 /* MasterViewController.swift in Sources */,
 				C513CAD61C516E2100991F2B /* HamburgerButton.swift in Sources */,
+				C513CADA1C52685C00991F2B /* Helper.swift in Sources */,
 				C506708E1C4FAD5400F10E41 /* AppDelegate.swift in Sources */,
 				C513CAD41C5135EE00991F2B /* MenuViewController.swift in Sources */,
 			);
@@ -281,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -319,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -331,10 +390,15 @@
 			baseConfigurationReference = BFEBACBC64B033BF84066659 /* Pods-Geschichte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Geschichte/Geschichte.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = Geschichte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Geschichte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -343,10 +407,15 @@
 			baseConfigurationReference = 9A792D3FE4A7E418F5B83E39 /* Pods-Geschichte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Geschichte/Geschichte.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = Geschichte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.finngaida.Geschichte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -22,6 +22,30 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>finngaida.de</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Vollkorn-Bold.ttf</string>
+		<string>Vollkorn-BoldItalic.ttf</string>
+		<string>Vollkorn-Italic.ttf</string>
+		<string>Vollkorn-Medium.ttf</string>
+		<string>Vollkorn-MediumItalic.ttf</string>
+		<string>Vollkorn-Regular.ttf</string>
+		<string>Vollkorn-Semibold.ttf</string>
+		<string>Vollkorn-SemiboldItalic.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

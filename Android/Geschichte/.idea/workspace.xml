@@ -36,6 +36,7 @@
     <favorites_list name="Geschichte" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
 <<<<<<< Updated upstream
       <file leaf-file-name="colors.xml" pinned="false" current-in-tab="true">
@@ -56,6 +57,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf />
+>>>>>>> origin/master
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1958,6 +1962,7 @@
 <<<<<<< Updated upstream
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
 =======
@@ -1967,6 +1972,8 @@
     <panes>
 >>>>>>> Stashed changes
       <pane id="Scratches" />
+=======
+>>>>>>> origin/master
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2006,6 +2013,7 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
 =======
           </PATH>
         </subPane>
@@ -2013,6 +2021,11 @@
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
 >>>>>>> Stashed changes
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
+>>>>>>> origin/master
       <pane id="Scope" />
     </panes>
   </component>
@@ -2267,7 +2280,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
 <<<<<<< Updated upstream
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2358,6 +2371,22 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="42" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="42" />
           <folding />
         </state>
@@ -2367,7 +2396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

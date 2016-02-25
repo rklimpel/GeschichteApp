@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2AF82AC3A2AAC2D94D5DF4BA'
-               BlueprintName = 'SAConfettiView-SAConfettiView'
+               BlueprintIdentifier = '67EF0808991DFA2D543C64B1'
+               BlueprintName = 'SwiftyJSON'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SAConfettiView.bundle'>
+               BuildableName = 'SwiftyJSON.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

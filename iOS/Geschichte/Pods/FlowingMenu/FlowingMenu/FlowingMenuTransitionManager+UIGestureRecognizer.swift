@@ -95,6 +95,8 @@ extension FlowingMenuTransitionManager {
       if percentage < 1 {
         moveControlViewsToPoint(CGPoint(x: 0, y: yLocation), waveWidth: 0)
         
+        (delegate ?? self).flowingMenuTransitionCancelled()
+        
         cancelInteractiveTransition()
       }
       else {

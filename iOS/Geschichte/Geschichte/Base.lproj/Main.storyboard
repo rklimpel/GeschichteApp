@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gqz-Xa-YKb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gqz-Xa-YKb">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master View Controller-->
         <scene sceneID="rR5-ga-UNw">
             <objects>
-                <viewController id="gqz-Xa-YKb" customClass="MasterViewController" customModule="Geschichte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="master" id="gqz-Xa-YKb" customClass="MasterViewController" customModule="Geschichte" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QBg-NH-ddD"/>
                         <viewControllerLayoutGuide type="bottom" id="p1x-5M-i2B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AP7-pj-sT3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJG-x5-whU">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="awB-WZ-v5m"/>
                                 </constraints>
@@ -28,7 +27,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F94-i9-oax">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,15 +35,18 @@
                             <constraint firstItem="p1x-5M-i2B" firstAttribute="top" secondItem="F94-i9-oax" secondAttribute="bottom" id="3s8-Nm-Kyu"/>
                             <constraint firstItem="F94-i9-oax" firstAttribute="leading" secondItem="AP7-pj-sT3" secondAttribute="leadingMargin" constant="-20" id="4cd-71-1r6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F94-i9-oax" secondAttribute="trailing" constant="-20" id="M8e-G6-6Wx"/>
-                            <constraint firstItem="F94-i9-oax" firstAttribute="top" secondItem="QBg-NH-ddD" secondAttribute="bottom" id="dFi-lD-zcU"/>
+                            <constraint firstItem="F94-i9-oax" firstAttribute="top" secondItem="QBg-NH-ddD" secondAttribute="bottom" constant="44" id="dFi-lD-zcU"/>
                             <constraint firstItem="HJG-x5-whU" firstAttribute="leading" secondItem="AP7-pj-sT3" secondAttribute="leadingMargin" constant="-20" id="h2h-xO-mUw"/>
                             <constraint firstItem="HJG-x5-whU" firstAttribute="top" secondItem="QBg-NH-ddD" secondAttribute="bottom" id="kPz-sY-8Fw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HJG-x5-whU" secondAttribute="trailing" constant="-20" id="qha-UB-Ywz"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="flowingMenuTransitionManager" destination="vQ3-62-FWO" id="0HM-Cs-mcH"/>
+                        <outlet property="navItem" destination="Hrc-OA-WQC" id="k6e-UO-g0M"/>
                         <outlet property="navigationBar" destination="HJG-x5-whU" id="mqm-eQ-1gR"/>
+                        <outlet property="scrollView" destination="F94-i9-oax" id="n2O-PF-cXj"/>
                         <segue destination="0QU-UV-wb2" kind="presentation" identifier="PresentMenuSegue" id="A2b-bO-3vD"/>
                     </connections>
                 </viewController>
@@ -62,36 +64,37 @@
                         <viewControllerLayoutGuide type="bottom" id="Tk1-FA-9NR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ICA-zj-kXR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAR-Ly-ZZl">
-                                <rect key="frame" x="0.0" y="20" width="595" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="vTu-45-u5n"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Title" id="nBi-ts-RL5"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-in-hxQ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="-4" y="64" width="383" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0QU-UV-wb2" id="cyB-c2-G42"/>
                                     <outlet property="delegate" destination="0QU-UV-wb2" id="bwU-Ef-EZp"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAR-Ly-ZZl">
+                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="tkb-lM-Nxn"/>
+                                    <constraint firstAttribute="height" constant="44" id="vTu-45-u5n"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Übersicht" id="nBi-ts-RL5"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="OFR-in-hxQ" secondAttribute="trailing" constant="-20" id="2SA-f5-M9P"/>
-                            <constraint firstItem="OFR-in-hxQ" firstAttribute="top" secondItem="i05-ZE-eax" secondAttribute="bottom" id="3JP-kn-BC0"/>
-                            <constraint firstItem="mAR-Ly-ZZl" firstAttribute="top" secondItem="i05-ZE-eax" secondAttribute="bottom" id="8MH-A4-Nh7"/>
-                            <constraint firstItem="mAR-Ly-ZZl" firstAttribute="leading" secondItem="ICA-zj-kXR" secondAttribute="leadingMargin" constant="-20" id="Dkr-9g-3mG"/>
-                            <constraint firstItem="OFR-in-hxQ" firstAttribute="leading" secondItem="ICA-zj-kXR" secondAttribute="leadingMargin" constant="-20" id="Esq-a7-eQD"/>
-                            <constraint firstItem="Tk1-FA-9NR" firstAttribute="top" secondItem="OFR-in-hxQ" secondAttribute="bottom" id="LlR-dN-ODs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mAR-Ly-ZZl" secondAttribute="trailing" constant="-15" id="jil-kf-Koa"/>
+                            <constraint firstItem="mAR-Ly-ZZl" firstAttribute="top" secondItem="i05-ZE-eax" secondAttribute="bottom" id="0K9-zb-WwC"/>
+                            <constraint firstItem="OFR-in-hxQ" firstAttribute="top" secondItem="ICA-zj-kXR" secondAttribute="topMargin" constant="64" id="7Nq-o0-5ly"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OFR-in-hxQ" secondAttribute="trailing" constant="-20" id="Bj1-e0-9ID"/>
+                            <constraint firstItem="mAR-Ly-ZZl" firstAttribute="leading" secondItem="ICA-zj-kXR" secondAttribute="leadingMargin" constant="-20" id="Dzs-cO-I3C"/>
+                            <constraint firstItem="Tk1-FA-9NR" firstAttribute="top" secondItem="OFR-in-hxQ" secondAttribute="bottom" constant="-20" id="Eod-XA-Uzu"/>
+                            <constraint firstItem="OFR-in-hxQ" firstAttribute="leading" secondItem="ICA-zj-kXR" secondAttribute="leadingMargin" constant="-20" id="LnE-zN-CcX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mAR-Ly-ZZl" secondAttribute="trailing" constant="-20" id="dKC-3U-rTh"/>
                         </constraints>
                     </view>
                     <connections>

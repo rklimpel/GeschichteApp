@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2AF82AC3A2AAC2D94D5DF4BA'
-               BlueprintName = 'SAConfettiView-SAConfettiView'
+               BlueprintIdentifier = 'FDAC8761693221A00C983BC6'
+               BlueprintName = 'TSMarkdownParser'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SAConfettiView.bundle'>
+               BuildableName = 'TSMarkdownParser.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

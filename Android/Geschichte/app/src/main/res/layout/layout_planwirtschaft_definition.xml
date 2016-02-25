@@ -37,7 +37,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:id="@+id/tV_content"
                 android:text="'Planwirtschaft (besser: Zentralverwaltungswirtschaft) bezeichnet eine Wirtschaftsordnung, in der die ökonomischen Prozesse einer Volkswirtschaft, insbesondere die Produktion und die Verteilung von Gütern und Dienstleistungen planmäßig und zentral gesteuert werden. Eine Planwirtschaft ist hierarchisch aufgebaut, d. h. die Einzelpläne der Wirtschaftssubjekte (Haushalte, Betriebe) müssen sich dem (politisch beschlossenen und i. d. R. als Gesetz verkündeten) Gesamtplan unterordnen. '"
                 android:textSize="20sp"
                 android:textIsSelectable="true"

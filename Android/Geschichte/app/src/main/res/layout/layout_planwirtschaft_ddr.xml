@@ -37,7 +37,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:id="@+id/tV_content"
                 android:text="In der heutigen Zeit gibt es nur noch wenige Länder, die das System der Planwirtschaft nutzen. Unter anderem aber Kuba und Nordkorea. Auch China zeigt noch Züge einer Planwirtschaft."
                 android:textSize="20sp"
                 android:textIsSelectable="true"
@@ -62,6 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/china_flag"
+                android:layout_marginBottom="16dp"
                 android:scaleType="fitCenter" />
 
 
